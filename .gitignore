@@ -53,3 +53,4 @@ Thumbs.db
 # Large raw CSV files (>100MB exceeds GitHub push limits; Parquet equivalents are committed)
 data/processed/aqi_history_long.csv
 data/processed/air_quality_2025_ist.csv
+
