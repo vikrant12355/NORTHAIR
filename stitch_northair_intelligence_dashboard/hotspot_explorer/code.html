@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary-fixed":"#adf1cc","surface-container":"#ebefe8","secondary-fixed-dim":"#c0c9c3","surface-bright":"#f6fbf4","inverse-primary":"#91d5b1","surface-container-lowest":"#ffffff","on-primary-container":"#a5e9c4","on-secondary-container":"#5e6662","on-tertiary-fixed":"#151d19","inverse-surface":"#2d322d","secondary":"#58605c","error":"#ba1a1a","primary-fixed-dim":"#91d5b1","on-error":"#ffffff","on-error-container":"#93000a","on-primary-fixed":"#002113","surface-container-high":"#e5e9e3","surface-container-low":"#f0f5ee","tertiary-fixed-dim":"#bfc9c1","surface-tint":"#276a4d","surface-container-highest":"#dfe4dd","on-secondary-fixed-variant":"#404945","on-background":"#181d19","on-secondary-fixed":"#151d1a","secondary-fixed":"#dce5df","on-primary":"#ffffff","surface-dim":"#d7dbd5","background":"#f6fbf4","on-surface":"#181d19","inverse-on-surface":"#eef2eb","error-container":"#ffdad6","surface":"#f6fbf4","outline-variant":"#bfc9c1","on-primary-fixed-variant":"#035136","tertiary-container":"#58625c","on-tertiary-fixed-variant":"#3f4943","tertiary-fixed":"#dbe5dd","on-tertiary":"#ffffff","primary":"#055237","primary-container":"#286b4e","tertiary":"#414a44","on-tertiary-container":"#d3ddd5","surface-variant":"#dfe4dd","outline":"#707973","secondary-container":"#dce5df","on-surface-variant":"#404943","on-secondary":"#ffffff"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"gutter-desktop":"1.5rem","margin-tablet":"1.5rem",margin:"1rem","space-3xs":"0.125rem","space-3xl":"3rem","space-lg":"1.25rem",gutter:"1rem","space-md":"0.75rem","space-base":"1rem","space-2xl":"2rem","space-2xs":"0.25rem","space-sm":"0.5rem","space-xl":"1.5rem","margin-desktop":"2.5rem","space-xs":"0.375rem"},fontFamily:{"display-hero":["Inter"],"body-lg":["Inter"],"display-hero-mobile":["Inter"],"headline-lg":["Inter"],"body-md":["Inter"],"metric-display":["Inter"],caption:["Inter"],"label-mono":["Inter"],"body-sm":["Inter"],"headline-sm":["Inter"],"metric-display-sm":["Inter"],"headline-md":["Inter"],"headline-lg-mobile":["Inter"],"label-md":["Inter"]},fontSize:{"display-hero":["44px",{lineHeight:"52px",letterSpacing:"-0.03em",fontWeight:"600"}],"body-lg":["15px",{lineHeight:"22px",letterSpacing:"-0.01em",fontWeight:"400"}],"display-hero-mobile":["32px",{lineHeight:"40px",letterSpacing:"-0.025em",fontWeight:"600"}],"headline-lg":["30px",{lineHeight:"38px",letterSpacing:"-0.025em",fontWeight:"600"}],"body-md":["13px",{lineHeight:"18px",letterSpacing:"-0.005em",fontWeight:"400"}],"metric-display":["36px",{lineHeight:"40px",letterSpacing:"-0.03em",fontWeight:"500"}],caption:["11px",{lineHeight:"14px",letterSpacing:"0.01em",fontWeight:"400"}],"label-mono":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"500"}],"body-sm":["12px",{lineHeight:"16px",letterSpacing:"0em",fontWeight:"400"}],"headline-sm":["18px",{lineHeight:"24px",letterSpacing:"-0.015em",fontWeight:"600"}],"metric-display-sm":["24px",{lineHeight:"28px",letterSpacing:"-0.02em",fontWeight:"500"}],"headline-md":["22px",{lineHeight:"28px",letterSpacing:"-0.02em",fontWeight:"600"}],"headline-lg-mobile":["24px",{lineHeight:"32px",letterSpacing:"-0.02em",fontWeight:"600"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.01em",fontWeight:"500"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="p-space-lg flex flex-col gap-space-xs"><div class="flex items-center gap-space-sm"><img alt="NorthAir Intelligence Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Xd9gd8agIIi-ek_ykPUVCTi4o3gAGsaCWmAbx7Uc6CHKyE5qR4qU-2uzA26dUSb6n7Wxt6XYIlwDV9vkPCDMtB-1vSamy3vQNhtVtNDofykbIvaWibIBmEuuBTbiUCbRb1Vu1vgaYePltaiIawTZr6N2n_EsSHeGgCJ7oH7FccX6hQ2g_eSA_lNmFMRCNQp0DvC5L3LPXhg1svNcfP2O3_GQgL3nIlEegUQEiXqg"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-semibold leading-none">NORTHAIR</span><span class="font-label-mono text-caption text-secondary tracking-widest leading-none mt-space-3xs">INTELLIGENCE</span></div></div><p class="font-caption text-caption text-outline leading-tight mt-space-xs">Understanding Air. Revealing Patterns. Enabling Decisions.</p><div class="flex items-center gap-space-xs mt-space-xs py-space-3xs px-space-xs bg-surface-container-low rounded-lg"><span class="h-2 w-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-mono text-caption text-on-surface-variant font-medium">48 Stations Online • N. India Net</span></div></div><nav class="flex flex-col gap-space-3xs px-space-md mt-space-xs" data-active-classes="bg-primary-container text-on-primary font-medium rounded-lg shadow-sm"><span class="font-label-mono text-caption text-outline px-space-sm py-space-3xs uppercase tracking-wider">Intelligence Matrix</span><a class="flex items-center gap-space-md px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="overview" href="#"><span class="material-symbols-outlined text-[18px]">dashboard</span><span class="font-body-md text-body-md">Overview</span></a><a class="flex items-center gap-space-md px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="regional-intelligence" href="#"><span class="material-symbols-outlined text-[18px]">map</span><span class="font-body-md text-body-md">Regional Intelligence</span></a><a aria-current="page" class="flex items-center gap-space-md px-space-sm py-space-xs transition-colors bg-primary-container text-on-primary font-medium rounded-lg shadow-sm" data-path="hotspot-explorer" href="#"><span class="material-symbols-outlined text-[18px]">radar</span><span class="font-body-md text-body-md">Hotspot Explorer</span></a><a class="flex items-center gap-space-md px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="pollutant-analytics" href="#"><span class="material-symbols-outlined text-[18px]">bubble_chart</span><span class="font-body-md text-body-md">Pollutant Analytics</span></a><a class="flex items-center gap-space-md px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="weather-intelligence" href="#"><span class="material-symbols-outlined text-[18px]">air</span><span class="font-body-md text-body-md">Weather Intelligence</span></a><a class="flex items-center gap-space-md px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="historical-aqi" href="#"><span class="material-symbols-outlined text-[18px]">history</span><span class="font-body-md text-body-md">Historical AQI</span></a><a class="flex items-center gap-space-md px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="predictive-intelligence" href="#"><span class="material-symbols-outlined text-[18px]">auto_graph</span><span class="font-body-md text-body-md">Predictive Intelligence</span></a><a class="flex items-center gap-space-md px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="insights-and-reports" href="#"><span class="material-symbols-outlined text-[18px]">analytics</span><span class="font-body-md text-body-md">Insights & Reports</span></a></nav></div><div class="p-space-md flex flex-col gap-space-3xs"><span class="font-label-mono text-caption text-outline px-space-sm py-space-3xs uppercase tracking-wider">System & Registry</span><nav class="flex flex-col gap-space-3xs" data-active-classes="bg-primary-container text-on-primary font-medium rounded-lg shadow-sm"><a class="flex items-center gap-space-md px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="documentation" href="#"><span class="material-symbols-outlined text-[18px]">menu_book</span><span class="font-body-md text-body-md">Documentation</span></a><a class="flex items-center gap-space-md px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="about-project" href="#"><span class="material-symbols-outlined text-[18px]">info</span><span class="font-body-md text-body-md">About Project</span></a><a class="flex items-center gap-space-md px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="system-settings" href="#"><span class="material-symbols-outlined text-[18px]">settings</span><span class="font-body-md text-body-md">System Settings</span></a></nav><div class="mt-space-sm pt-space-xs px-space-sm flex items-center justify-between text-outline"><span class="font-caption text-caption">v4.2 CPCB Core</span><span class="font-caption text-caption">Chandigarh HQ</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-gutter-desktop"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><span class="font-medium text-secondary">Telemetry</span><span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span><span class="font-medium text-primary">Northern India Grid</span></div><div class="h-4 w-[1px] bg-outline-variant"></div><div class="flex items-center gap-space-xs px-space-sm py-space-3xs bg-primary-fixed/20 text-on-primary-fixed-variant rounded-full"><span class="h-1.5 w-1.5 rounded-full bg-primary-container animate-pulse"></span><span class="font-label-mono text-caption font-semibold">All 48 Stations Operational</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-low rounded-lg text-on-surface-variant"><span class="material-symbols-outlined text-[16px] text-primary">sync</span><span class="font-caption text-caption font-medium">2025 Live Validation & CPCB Synced</span><span class="material-symbols-outlined text-[14px]">expand_more</span></div><button class="flex items-center gap-space-xs h-8 px-space-md bg-surface-container-lowest hover:bg-surface-container text-on-surface rounded-lg shadow-sm font-label-md text-label-md transition-colors"><span class="material-symbols-outlined text-[16px] text-primary">download</span><span>Export Analytical Report</span></button><div class="h-5 w-[1px] bg-outline-variant"></div><div class="flex items-center gap-space-xs cursor-pointer"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span class="material-symbols-outlined text-on-surface-variant text-[16px]">arrow_drop_down</span></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="px-gutter-desktop py-space-xl flex flex-col gap-space-xl max-w-[1680px] mx-auto w-full">
+<!-- Executive Title & Classification Notice -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-mono text-caption uppercase tracking-wider text-secondary">Registry Subsystem • Geospatial Telemetry</span>
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-mono text-caption text-primary font-semibold">Live Clustered State</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight font-semibold">Pollution Hotspot Intelligence</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-3xl">
+          Persistent high-concentration detection, 90th percentile exceedance analysis, and temporal frequency mapping across the Northern India air monitoring basin.
+        </p>
+</div>
+<div class="flex items-center self-start lg:self-auto bg-surface-container-high px-space-md py-space-xs rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-tertiary mr-space-xs">verified_user</span>
+<span class="font-label-mono text-caption text-tertiary">Analytical Research Classification • Not Official Regulatory CPCB Hotspot Designation</span>
+</div>
+</div>
+<!-- Hotspot Executive Metrics Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-base">
+<!-- Metric 1: Chronic Hotspots -->
+<div class="bg-surface-container-lowest p-space-base rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-caption text-secondary uppercase tracking-wider">Chronic Hotspot Stations</span>
+<span class="w-2 h-2 rounded-full bg-error"></span>
+</div>
+<div class="my-space-sm flex items-baseline gap-space-xs">
+<span class="font-metric-display text-metric-display text-on-surface tracking-tight">7 <span class="text-secondary font-headline-sm text-headline-sm">/ 48</span></span>
+</div>
+<div class="flex items-center justify-between text-secondary pt-space-2xs bg-surface-container-low px-space-xs py-space-3xs rounded">
+<span class="font-label-mono text-caption text-error font-medium">Exceeding 1.5× Regional Mean</span>
+<span class="material-symbols-outlined text-[15px] text-error">priority_high</span>
+</div>
+</div>
+<!-- Metric 2: 90th Percentile PM2.5 -->
+<div class="bg-surface-container-lowest p-space-base rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-caption text-secondary uppercase tracking-wider">90th Percentile PM2.5</span>
+<span class="font-label-mono text-caption bg-surface-container px-space-2xs rounded text-secondary font-medium">Peak Envelope</span>
+</div>
+<div class="my-space-sm flex items-baseline gap-space-xs">
+<span class="font-metric-display text-metric-display text-on-surface tracking-tight">168.4</span>
+<span class="font-body-sm text-body-sm text-secondary font-medium">µg/m³</span>
+</div>
+<div class="flex items-center justify-between text-secondary pt-space-2xs bg-surface-container-low px-space-xs py-space-3xs rounded">
+<span class="font-label-mono text-caption text-on-surface-variant">Across Priority Clusters</span>
+<span class="font-label-mono text-caption text-primary font-semibold">+38.2% vs baseline</span>
+</div>
+</div>
+<!-- Metric 3: Highest Exceedance -->
+<div class="bg-surface-container-lowest p-space-base rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-caption text-secondary uppercase tracking-wider">Highest Exceedance Freq.</span>
+<span class="material-symbols-outlined text-[16px] text-error">trending_up</span>
+</div>
+<div class="my-space-sm flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface truncate">Anand Vihar</span>
+<span class="font-label-mono text-caption text-error font-semibold mt-space-3xs">84% of days > NAAQS std</span>
+</div>
+<div class="flex items-center justify-between text-secondary pt-space-2xs bg-surface-container-low px-space-xs py-space-3xs rounded">
+<span class="font-label-mono text-caption text-on-surface-variant">Delhi NCT • ID #DL-004</span>
+<span class="font-label-mono text-caption text-error font-semibold">Tier 1 Extreme</span>
+</div>
+</div>
+<!-- Metric 4: Resilient Station -->
+<div class="bg-surface-container-lowest p-space-base rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-caption text-secondary uppercase tracking-wider">Most Resilient Station</span>
+<span class="material-symbols-outlined text-[16px] text-primary">eco</span>
+</div>
+<div class="my-space-sm flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface truncate">Sec 25, Chandigarh</span>
+<span class="font-label-mono text-caption text-primary font-semibold mt-space-3xs">22% of days > NAAQS std</span>
+</div>
+<div class="flex items-center justify-between text-secondary pt-space-2xs bg-surface-container-low px-space-xs py-space-3xs rounded">
+<span class="font-label-mono text-caption text-on-surface-variant">UT Chandigarh • ID #CH-002</span>
+<span class="font-label-mono text-caption text-primary font-semibold">Low Vulnerability</span>
+</div>
+</div>
+</div>
+<!-- Monthly Hotspot Heatmap Matrix Section -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-space-xs">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Monthly Temporal Exceedance Heatmap Matrix</h2>
+<span class="font-label-mono text-caption bg-surface-container-high px-space-xs py-space-3xs rounded text-on-surface-variant">2024–2025 Calendar</span>
+</div>
+<p class="font-body-md text-body-md text-secondary mt-space-3xs">
+            Observation frequency of severe episodes across the 12 highest-risk regional stations. Pronounced clustering highlights the northern winter thermal inversion corridor (Nov – Jan).
+          </p>
+</div>
+<!-- Heatmap Legend -->
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-xs rounded-lg self-start md:self-auto">
+<span class="font-label-mono text-caption text-secondary mr-space-xs">AQI Severity Scale:</span>
+<span class="flex items-center gap-space-3xs font-label-mono text-caption text-secondary">
+<span class="w-3 h-3 rounded bg-[#286B4E]"></span> Good
+          </span>
+<span class="flex items-center gap-space-3xs font-label-mono text-caption text-secondary">
+<span class="w-3 h-3 rounded bg-[#707973]"></span> Moderate
+          </span>
+<span class="flex items-center gap-space-3xs font-label-mono text-caption text-secondary">
+<span class="w-3 h-3 rounded bg-[#BA6828]"></span> Poor
+          </span>
+<span class="flex items-center gap-space-3xs font-label-mono text-caption text-secondary">
+<span class="w-3 h-3 rounded bg-[#BA1A1A]"></span> Very Poor
+          </span>
+<span class="flex items-center gap-space-3xs font-label-mono text-caption text-secondary">
+<span class="w-3 h-3 rounded bg-[#5C0A0A]"></span> Severe+
+          </span>
+</div>
+</div>
+<!-- Matrix Canvas Wrapper -->
+<div class="overflow-x-auto w-full mt-space-xs">
+<div class="min-w-[840px] flex flex-col gap-space-2xs">
+<!-- Month Headers -->
+<div class="grid grid-cols-[220px_repeat(12,1fr)] gap-space-2xs text-center font-label-mono text-caption text-secondary pb-space-xs">
+<div class="text-left pl-space-xs font-semibold">Station / Basin Cluster</div>
+<div>JAN</div>
+<div>FEB</div>
+<div>MAR</div>
+<div>APR</div>
+<div>MAY</div>
+<div>JUN</div>
+<div>JUL</div>
+<div>AUG</div>
+<div>SEP</div>
+<div>OCT</div>
+<div>NOV</div>
+<div>DEC</div>
+</div>
+<!-- Heatmap Rows -->
+<!-- 1. Anand Vihar -->
+<div class="grid grid-cols-[220px_repeat(12,1fr)] gap-space-2xs items-center hover:bg-surface-container-low py-space-3xs px-space-2xs rounded transition-colors group">
+<div class="font-body-md text-body-md font-medium text-on-surface truncate flex items-center justify-between pr-space-xs">
+<span>Anand Vihar, Delhi</span>
+<span class="font-label-mono text-caption text-error font-semibold">0.84</span>
+</div>
+<div class="h-8 rounded bg-[#5C0A0A] flex items-center justify-center text-white font-label-mono text-caption font-bold shadow-sm" title="Jan: 382 µg/m³">382</div>
+<div class="h-8 rounded bg-[#BA1A1A] flex items-center justify-center text-white font-label-mono text-caption font-semibold" title="Feb: 245 µg/m³">245</div>
+<div class="h-8 rounded bg-[#BA6828] flex items-center justify-center text-white font-label-mono text-caption" title="Mar: 142 µg/m³">142</div>
+<div class="h-8 rounded bg-[#BA6828] flex items-center justify-center text-white font-label-mono text-caption" title="Apr: 130 µg/m³">130</div>
+<div class="h-8 rounded bg-[#707973] flex items-center justify-center text-white font-label-mono text-caption" title="May: 98 µg/m³">98</div>
+<div class="h-8 rounded bg-[#707973] flex items-center justify-center text-white font-label-mono text-caption" title="Jun: 82 µg/m³">82</div>
+<div class="h-8 rounded bg-[#286B4E] flex items-center justify-center text-white font-label-mono text-caption" title="Jul: 46 µg/m³">46</div>
+<div class="h-8 rounded bg-[#286B4E] flex items-center justify-center text-white font-label-mono text-caption" title="Aug: 39 µg/m³">39</div>
+<div class="h-8 rounded bg-[#707973] flex items-center justify-center text-white font-label-mono text-caption" title="Sep: 64 µg/m³">64</div>
+<div class="h-8 rounded bg-[#BA1A1A] flex items-center justify-center text-white font-label-mono text-caption font-semibold" title="Oct: 228 µg/m³">228</div>
+<div class="h-8 rounded bg-[#5C0A0A] flex items-center justify-center text-white font-label-mono text-caption font-bold shadow-sm" title="Nov: 412 µg/m³">412</div>
+<div class="h-8 rounded bg-[#5C0A0A] flex items-center justify-center text-white font-label-mono text-caption font-bold shadow-sm" title="Dec: 394 µg/m³">394</div>
+</div>
+<!-- 2. Jahangirpuri -->
+<div class="grid grid-cols-[220px_repeat(12,1fr)] gap-space-2xs items-center hover:bg-surface-container-low py-space-3xs px-space-2xs rounded transition-colors group">
+<div class="font-body-md text-body-md font-medium text-on-surface truncate flex items-center justify-between pr-space-xs">
+<span>Jahangirpuri, Delhi</span>
+<span class="font-label-mono text-caption text-error font-semibold">0.81</span>
+</div>
+<div class="h-8 rounded bg-[#5C0A0A] flex items-center justify-center text-white font-label-mono text-caption font-bold shadow-sm">365</div>
+<div class="h-8 rounded bg-[#BA1A1A] flex items-center justify-center text-white font-label-mono text-caption font-semibold">230</div>
+<div class="h-8 rounded bg-[#BA6828] flex items-center justify-center text-white font-label-mono text-caption">138</div>
+<div class="h-8 rounded bg-[#BA6828] flex items-center justify-center text-white font-label-mono text-caption">122</div>
+<div class="h-8 rounded bg-[#707973] flex items-center justify-center text-white font-label-mono text-caption">92</div>
+<div class="h-8 rounded bg-[#707973] flex items-center justify-center text-white font-label-mono text-caption">78</div>
+<div class="h-8 rounded bg-[#286B4E] flex items-center justify-center text-white font-label-mono text-caption">44</div>
+<div class="h-8 rounded bg-[#286B4E] flex items-center justify-center text-white font-label-mono text-caption">38</div>
+<div class="h-8 rounded bg-[#707973] flex items-center justify-center text-white font-label-mono text-caption">60</div>
+<div class="h-8 rounded bg-[#BA1A1A] flex items-center justify-center text-white font-label-mono text-caption font-semibold">215</div>
+<div class="h-8 rounded bg-[#5C0A0A] flex items-center justify-center text-white font-label-mono text-caption font-bold shadow-sm">398</div>
+<div class="h-8 rounded bg-[#5C0A0A] flex items-center justify-center text-white font-label-mono text-caption font-bold shadow-sm">370</div>
+</div>
+<!-- 3. Industrial Area, Ludhiana -->
+<div class="grid grid-cols-[220px_repeat(12,1fr)] gap-space-2xs items-center hover:bg-surface-container-low py-space-3xs px-space-2xs rounded transition-colors group">
+<div class="font-body-md text-body-md font-medium text-on-surface truncate flex items-center justify-between pr-space-xs">
+<span>Industrial Focal, Ludhiana</span>
+<span class="font-label-mono text-caption text-error font-semibold">0.78</span>
+</div>
+<div class="h-8 rounded bg-[#BA1A1A] flex items-center justify-center text-white font-label-mono text-caption font-semibold">290</div>
+<div class="h-8 rounded bg-[#BA1A1A] flex items-center justify-center text-white font-label-mono text-caption font-semibold">210</div>
+<div class="h-8 rounded bg-[#BA6828] flex items-center justify-center text-white font-label-mono text-caption">145</div>
+<div class="h-8 rounded bg-[#BA6828] flex items-center justify-center text-white font-label-mono text-caption">128</div>
+<div class="h-8 rounded bg-[#BA6828] flex items-center justify-center text-white font-label-mono text-caption">105</div>
+<div class="h-8 rounded bg-[#707973] flex items-center justify-center text-white font-label-mono text-caption">88</div>
+<div class="h-8 rounded bg-[#286B4E] flex items-center justify-center text-white font-label-mono text-caption">52</div>
+<div class="h-8 rounded bg-[#286B4E] flex items-center justify-center text-white font-label-mono text-caption">45</div>
+<div class="h-8 rounded bg-[#707973] flex items-center justify-center text-white font-label-mono text-caption">74</div>
+<div class="h-8 rounded bg-[#BA1A1A] flex items-center justify-center text-white font-label-mono text-caption font-semibold">245</div>
+<div class="h-8 rounded bg-[#5C0A0A] flex items-center justify-center text-white font-label-mono text-caption font-bold shadow-sm">378</div>
+<div class="h-8 rounded bg-[#BA1A1A] flex items-center justify-center text-white font-label-mono text-caption font-semibold">310</div>
+</div>
+<!-- 4. Sanjay Nagar, Ghaziabad -->
+<div class="grid grid-cols-[220px_repeat(12,1fr)] gap-space-2xs items-center hover:bg-surface-container-low py-space-3xs px-space-2xs rounded transition-colors group">
+<div class="font-body-md text-body-md font-medium text-on-surface truncate flex items-center justify-between pr-space-xs">
+<span>Sanjay Nagar, Ghaziabad</span>
+<span class="font-label-mono text-caption text-error font-semibold">0.76</span>
+</div>
+<div class="h-8 rounded bg-[#5C0A0A] flex items-center justify-center text-white font-label-mono text-caption font-bold shadow-sm">340</div>
+<div class="h-8 rounded bg-[#BA1A1A] flex items-center justify-center text-white font-label-mono text-caption font-semibold">225</div>
+<div class="h-8 rounded bg-[#BA6828] flex items-center justify-center text-white font-label-mono text-caption">135</div>
+<div class="h-8 rounded bg-[#BA6828] flex items-center justify-center text-white font-label-mono text-caption">120</div>
+<div class="h-8 rounded bg-[#707973] flex items-center justify-center text-white font-label-mono text-caption">95</div>
+<div class="h-8 rounded bg-[#707973] flex items-center justify-center text-white font-label-mono text-caption">80</div>
+<div class="h-8 rounded bg-[#286B4E] flex items-center justify-center text-white font-label-mono text-caption">48</div>
+<div class="h-8 rounded bg-[#286B4E] flex items-center justify-center text-white font-label-mono text-caption">41</div>
+<div class="h-8 rounded bg-[#707973] flex items-center justify-center text-white font-label-mono text-caption">68</div>
+<div class="h-8 rounded bg-[#BA1A1A] flex items-center justify-center text-white font-label-mono text-caption font-semibold">218</div>
+<div class="h-8 rounded bg-[#5C0A0A] flex items-center justify-center text-white font-label-mono text-caption font-bold shadow-sm">385</div>
+<div class="h-8 rounded bg-[#5C0A0A] flex items-center justify-center text-white font-label-mono text-caption font-bold shadow-sm">355</div>
+</div>
+<!-- 5. Sector 62, Noida -->
+<div class="grid grid-cols-[220px_repeat(12,1fr)] gap-space-2xs items-center hover:bg-surface-container-low py-space-3xs px-space-2xs rounded transition-colors group">
+<div class="font-body-md text-body-md font-medium text-on-surface truncate flex items-center justify-between pr-space-xs">
+<span>Sector 62, Noida</span>
+<span class="font-label-mono text-caption text-error font-semibold">0.74</span>
+</div>
+<div class="h-8 rounded bg-[#BA1A1A] flex items-center justify-center text-white font-label-mono text-caption font-semibold">310</div>
+<div class="h-8 rounded bg-[#BA1A1A] flex items-center justify-center text-white font-label-mono text-caption font-semibold">212</div>
+<div class="h-8 rounded bg-[#BA6828] flex items-center justify-center text-white font-label-mono text-caption">128</div>
+<div class="h-8 rounded bg-[#BA6828] flex items-center justify-center text-white font-label-mono text-caption">115</div>
+<div class="h-8 rounded bg-[#707973] flex items-center justify-center text-white font-label-mono text-caption">89</div>
+<div class="h-8 rounded bg-[#707973] flex items-center justify-center text-white font-label-mono text-caption">74</div>
+<div class="h-8 rounded bg-[#286B4E] flex items-center justify-center text-white font-label-mono text-caption">45</div>
+<div class="h-8 rounded bg-[#286B4E] flex items-center justify-center text-white font-label-mono text-caption">38</div>
+<div class="h-8 rounded bg-[#707973] flex items-center justify-center text-white font-label-mono text-caption">62</div>
+<div class="h-8 rounded bg-[#BA1A1A] flex items-center justify-center text-white font-label-mono text-caption font-semibold">205</div>
+<div class="h-8 rounded bg-[#5C0A0A] flex items-center justify-center text-white font-label-mono text-caption font-bold shadow-sm">362</div>
+<div class="h-8 rounded bg-[#BA1A1A] flex items-center justify-center text-white font-label-mono text-caption font-semibold">324</div>
+</div>
+<!-- 6. Vikas Sadan, Gurugram -->
+<div class="grid grid-cols-[220px_repeat(12,1fr)] gap-space-2xs items-center hover:bg-surface-container-low py-space-3xs px-space-2xs rounded transition-colors group">
+<div class="font-body-md text-body-md font-medium text-on-surface truncate flex items-center justify-between pr-space-xs">
+<span>Vikas Sadan, Gurugram</span>
+<span class="font-label-mono text-caption text-error font-semibold">0.71</span>
+</div>
+<div class="h-8 rounded bg-[#BA1A1A] flex items-center justify-center text-white font-label-mono text-caption font-semibold">295</div>
+<div class="h-8 rounded bg-[#BA1A1A] flex items-center justify-center text-white font-label-mono text-caption font-semibold">202</div>
+<div class="h-8 rounded bg-[#BA6828] flex items-center justify-center text-white font-label-mono text-caption">122</div>
+<div class="h-8 rounded bg-[#BA6828] flex items-center justify-center text-white font-label-mono text-caption">110</div>
+<div class="h-8 rounded bg-[#707973] flex items-center justify-center text-white font-label-mono text-caption">84</div>
+<div class="h-8 rounded bg-[#707973] flex items-center justify-center text-white font-label-mono text-caption">70</div>
+<div class="h-8 rounded bg-[#286B4E] flex items-center justify-center text-white font-label-mono text-caption">42</div>
+<div class="h-8 rounded bg-[#286B4E] flex items-center justify-center text-white font-label-mono text-caption">36</div>
+<div class="h-8 rounded bg-[#707973] flex items-center justify-center text-white font-label-mono text-caption">58</div>
+<div class="h-8 rounded bg-[#BA1A1A] flex items-center justify-center text-white font-label-mono text-caption font-semibold">192</div>
+<div class="h-8 rounded bg-[#5C0A0A] flex items-center justify-center text-white font-label-mono text-caption font-bold shadow-sm">345</div>
+<div class="h-8 rounded bg-[#BA1A1A] flex items-center justify-center text-white font-label-mono text-caption font-semibold">305</div>
+</div>
+<!-- 7. Mandi Gobindgarh -->
+<div class="grid grid-cols-[220px_repeat(12,1fr)] gap-space-2xs items-center hover:bg-surface-container-low py-space-3xs px-space-2xs rounded transition-colors group">
+<div class="font-body-md text-body-md font-medium text-on-surface truncate flex items-center justify-between pr-space-xs">
+<span>Mandi Gobindgarh, Punjab</span>
+<span class="font-label-mono text-caption text-error font-semibold">0.69</span>
+</div>
+<div class="h-8 rounded bg-[#BA1A1A] flex items-center justify-center text-white font-label-mono text-caption font-semibold">278</div>
+<div class="h-8 rounded bg-[#BA1A1A] flex items-center justify-center text-white font-label-mono text-caption font-semibold">194</div>
+<div class="h-8 rounded bg-[#BA6828] flex items-center justify-center text-white font-label-mono text-caption">132</div>
+<div class="h-8 rounded bg-[#BA6828] flex items-center justify-center text-white font-label-mono text-caption">118</div>
+<div class="h-8 rounded bg-[#BA6828] flex items-center justify-center text-white font-label-mono text-caption">102</div>
+<div class="h-8 rounded bg-[#707973] flex items-center justify-center text-white font-label-mono text-caption">86</div>
+<div class="h-8 rounded bg-[#286B4E] flex items-center justify-center text-white font-label-mono text-caption">50</div>
+<div class="h-8 rounded bg-[#286B4E] flex items-center justify-center text-white font-label-mono text-caption">44</div>
+<div class="h-8 rounded bg-[#707973] flex items-center justify-center text-white font-label-mono text-caption">70</div>
+<div class="h-8 rounded bg-[#BA1A1A] flex items-center justify-center text-white font-label-mono text-caption font-semibold">235</div>
+<div class="h-8 rounded bg-[#5C0A0A] flex items-center justify-center text-white font-label-mono text-caption font-bold shadow-sm">360</div>
+<div class="h-8 rounded bg-[#BA1A1A] flex items-center justify-center text-white font-label-mono text-caption font-semibold">290</div>
+</div>
+<!-- 8. Sector 16A, Faridabad -->
+<div class="grid grid-cols-[220px_repeat(12,1fr)] gap-space-2xs items-center hover:bg-surface-container-low py-space-3xs px-space-2xs rounded transition-colors group">
+<div class="font-body-md text-body-md font-medium text-on-surface truncate flex items-center justify-between pr-space-xs">
+<span>Sec 16A, Faridabad</span>
+<span class="font-label-mono text-caption text-secondary font-semibold">0.65</span>
+</div>
+<div class="h-8 rounded bg-[#BA1A1A] flex items-center justify-center text-white font-label-mono text-caption font-semibold">260</div>
+<div class="h-8 rounded bg-[#BA1A1A] flex items-center justify-center text-white font-label-mono text-caption font-semibold">188</div>
+<div class="h-8 rounded bg-[#BA6828] flex items-center justify-center text-white font-label-mono text-caption">118</div>
+<div class="h-8 rounded bg-[#BA6828] flex items-center justify-center text-white font-label-mono text-caption">105</div>
+<div class="h-8 rounded bg-[#707973] flex items-center justify-center text-white font-label-mono text-caption">80</div>
+<div class="h-8 rounded bg-[#707973] flex items-center justify-center text-white font-label-mono text-caption">68</div>
+<div class="h-8 rounded bg-[#286B4E] flex items-center justify-center text-white font-label-mono text-caption">40</div>
+<div class="h-8 rounded bg-[#286B4E] flex items-center justify-center text-white font-label-mono text-caption">35</div>
+<div class="h-8 rounded bg-[#707973] flex items-center justify-center text-white font-label-mono text-caption">56</div>
+<div class="h-8 rounded bg-[#BA1A1A] flex items-center justify-center text-white font-label-mono text-caption font-semibold">180</div>
+<div class="h-8 rounded bg-[#5C0A0A] flex items-center justify-center text-white font-label-mono text-caption font-bold shadow-sm">330</div>
+<div class="h-8 rounded bg-[#BA1A1A] flex items-center justify-center text-white font-label-mono text-caption font-semibold">280</div>
+</div>
+<!-- 9. Golden Temple, Amritsar -->
+<div class="grid grid-cols-[220px_repeat(12,1fr)] gap-space-2xs items-center hover:bg-surface-container-low py-space-3xs px-space-2xs rounded transition-colors group">
+<div class="font-body-md text-body-md font-medium text-on-surface truncate flex items-center justify-between pr-space-xs">
+<span>Golden Temple, Amritsar</span>
+<span class="font-label-mono text-caption text-secondary font-semibold">0.58</span>
+</div>
+<div class="h-8 rounded bg-[#BA1A1A] flex items-center justify-center text-white font-label-mono text-caption font-semibold">210</div>
+<div class="h-8 rounded bg-[#BA6828] flex items-center justify-center text-white font-label-mono text-caption">154</div>
+<div class="h-8 rounded bg-[#BA6828] flex items-center justify-center text-white font-label-mono text-caption">108</div>
+<div class="h-8 rounded bg-[#707973] flex items-center justify-center text-white font-label-mono text-caption">92</div>
+<div class="h-8 rounded bg-[#707973] flex items-center justify-center text-white font-label-mono text-caption">75</div>
+<div class="h-8 rounded bg-[#707973] flex items-center justify-center text-white font-label-mono text-caption">62</div>
+<div class="h-8 rounded bg-[#286B4E] flex items-center justify-center text-white font-label-mono text-caption">38</div>
+<div class="h-8 rounded bg-[#286B4E] flex items-center justify-center text-white font-label-mono text-caption">32</div>
+<div class="h-8 rounded bg-[#286B4E] flex items-center justify-center text-white font-label-mono text-caption">48</div>
+<div class="h-8 rounded bg-[#BA6828] flex items-center justify-center text-white font-label-mono text-caption">150</div>
+<div class="h-8 rounded bg-[#BA1A1A] flex items-center justify-center text-white font-label-mono text-caption font-semibold">285</div>
+<div class="h-8 rounded bg-[#BA1A1A] flex items-center justify-center text-white font-label-mono text-caption font-semibold">235</div>
+</div>
+<!-- 10. Sector 53, Phase 7 Mohali -->
+<div class="grid grid-cols-[220px_repeat(12,1fr)] gap-space-2xs items-center hover:bg-surface-container-low py-space-3xs px-space-2xs rounded transition-colors group">
+<div class="font-body-md text-body-md font-medium text-on-surface truncate flex items-center justify-between pr-space-xs">
+<span>Phase 7, Mohali</span>
+<span class="font-label-mono text-caption text-secondary font-semibold">0.42</span>
+</div>
+<div class="h-8 rounded bg-[#BA6828] flex items-center justify-center text-white font-label-mono text-caption">165</div>
+<div class="h-8 rounded bg-[#BA6828] flex items-center justify-center text-white font-label-mono text-caption">120</div>
+<div class="h-8 rounded bg-[#707973] flex items-center justify-center text-white font-label-mono text-caption">85</div>
+<div class="h-8 rounded bg-[#707973] flex items-center justify-center text-white font-label-mono text-caption">72</div>
+<div class="h-8 rounded bg-[#707973] flex items-center justify-center text-white font-label-mono text-caption">60</div>
+<div class="h-8 rounded bg-[#286B4E] flex items-center justify-center text-white font-label-mono text-caption">48</div>
+<div class="h-8 rounded bg-[#286B4E] flex items-center justify-center text-white font-label-mono text-caption">32</div>
+<div class="h-8 rounded bg-[#286B4E] flex items-center justify-center text-white font-label-mono text-caption">28</div>
+<div class="h-8 rounded bg-[#286B4E] flex items-center justify-center text-white font-label-mono text-caption">42</div>
+<div class="h-8 rounded bg-[#BA6828] flex items-center justify-center text-white font-label-mono text-caption">115</div>
+<div class="h-8 rounded bg-[#BA1A1A] flex items-center justify-center text-white font-label-mono text-caption font-semibold">210</div>
+<div class="h-8 rounded bg-[#BA6828] flex items-center justify-center text-white font-label-mono text-caption">175</div>
+</div>
+<!-- 11. Panchkula Sec 6 -->
+<div class="grid grid-cols-[220px_repeat(12,1fr)] gap-space-2xs items-center hover:bg-surface-container-low py-space-3xs px-space-2xs rounded transition-colors group">
+<div class="font-body-md text-body-md font-medium text-on-surface truncate flex items-center justify-between pr-space-xs">
+<span>Sector 6, Panchkula</span>
+<span class="font-label-mono text-caption text-primary font-semibold">0.29</span>
+</div>
+<div class="h-8 rounded bg-[#BA6828] flex items-center justify-center text-white font-label-mono text-caption">130</div>
+<div class="h-8 rounded bg-[#707973] flex items-center justify-center text-white font-label-mono text-caption">95</div>
+<div class="h-8 rounded bg-[#707973] flex items-center justify-center text-white font-label-mono text-caption">68</div>
+<div class="h-8 rounded bg-[#707973] flex items-center justify-center text-white font-label-mono text-caption">58</div>
+<div class="h-8 rounded bg-[#286B4E] flex items-center justify-center text-white font-label-mono text-caption">48</div>
+<div class="h-8 rounded bg-[#286B4E] flex items-center justify-center text-white font-label-mono text-caption">40</div>
+<div class="h-8 rounded bg-[#286B4E] flex items-center justify-center text-white font-label-mono text-caption">26</div>
+<div class="h-8 rounded bg-[#286B4E] flex items-center justify-center text-white font-label-mono text-caption">22</div>
+<div class="h-8 rounded bg-[#286B4E] flex items-center justify-center text-white font-label-mono text-caption">34</div>
+<div class="h-8 rounded bg-[#707973] flex items-center justify-center text-white font-label-mono text-caption">92</div>
+<div class="h-8 rounded bg-[#BA6828] flex items-center justify-center text-white font-label-mono text-caption">165</div>
+<div class="h-8 rounded bg-[#BA6828] flex items-center justify-center text-white font-label-mono text-caption">140</div>
+</div>
+<!-- 12. Sector 25 Chandigarh -->
+<div class="grid grid-cols-[220px_repeat(12,1fr)] gap-space-2xs items-center hover:bg-surface-container-low py-space-3xs px-space-2xs rounded transition-colors group">
+<div class="font-body-md text-body-md font-medium text-on-surface truncate flex items-center justify-between pr-space-xs">
+<span>Sec 25, Chandigarh</span>
+<span class="font-label-mono text-caption text-primary font-semibold">0.22</span>
+</div>
+<div class="h-8 rounded bg-[#707973] flex items-center justify-center text-white font-label-mono text-caption">95</div>
+<div class="h-8 rounded bg-[#707973] flex items-center justify-center text-white font-label-mono text-caption">72</div>
+<div class="h-8 rounded bg-[#286B4E] flex items-center justify-center text-white font-label-mono text-caption">52</div>
+<div class="h-8 rounded bg-[#286B4E] flex items-center justify-center text-white font-label-mono text-caption">44</div>
+<div class="h-8 rounded bg-[#286B4E] flex items-center justify-center text-white font-label-mono text-caption">38</div>
+<div class="h-8 rounded bg-[#286B4E] flex items-center justify-center text-white font-label-mono text-caption">32</div>
+<div class="h-8 rounded bg-[#286B4E] flex items-center justify-center text-white font-label-mono text-caption">20</div>
+<div class="h-8 rounded bg-[#286B4E] flex items-center justify-center text-white font-label-mono text-caption">18</div>
+<div class="h-8 rounded bg-[#286B4E] flex items-center justify-center text-white font-label-mono text-caption">28</div>
+<div class="h-8 rounded bg-[#707973] flex items-center justify-center text-white font-label-mono text-caption">74</div>
+<div class="h-8 rounded bg-[#BA6828] flex items-center justify-center text-white font-label-mono text-caption">128</div>
+<div class="h-8 rounded bg-[#707973] flex items-center justify-center text-white font-label-mono text-caption">98</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Comparative Analysis: 90th Percentile vs Mean Exposure Risk -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
+<!-- Visual 1: Acute Exposure Disparity (SVG Bar Range Matrix) -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-3xs">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">90th Percentile vs Annual Mean PM2.5 Divergence</h2>
+<span class="font-label-mono text-caption text-secondary">µg/m³ • Acute vs Chronic</span>
+</div>
+<p class="font-body-md text-body-md text-secondary">
+            Wide spreads denote vulnerability to extreme episodic spikes (combustion/crop fires), whereas high baselines signify persistent industrial or traffic emissions.
+          </p>
+</div>
+<!-- Custom Telemetry Bar Chart -->
+<div class="my-space-md flex flex-col gap-space-sm">
+<!-- Station Item 1 -->
+<div class="flex flex-col gap-space-3xs">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="font-medium text-on-surface">Anand Vihar, Delhi</span>
+<span class="font-label-mono text-caption text-secondary">Mean: <strong class="text-on-surface">148.2</strong> | 90th %ile: <strong class="text-error">284.6 µg/m³</strong></span>
+</div>
+<div class="h-5 w-full bg-surface-container rounded relative overflow-hidden flex items-center">
+<!-- Mean bar -->
+<div class="h-full bg-primary-container rounded-l" style="width: 52%;"></div>
+<!-- 90th percentile delta extension -->
+<div class="h-full bg-error" style="width: 47%;"></div>
+</div>
+</div>
+<!-- Station Item 2 -->
+<div class="flex flex-col gap-space-3xs">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="font-medium text-on-surface">Jahangirpuri, Delhi</span>
+<span class="font-label-mono text-caption text-secondary">Mean: <strong class="text-on-surface">139.5</strong> | 90th %ile: <strong class="text-error">268.1 µg/m³</strong></span>
+</div>
+<div class="h-5 w-full bg-surface-container rounded relative overflow-hidden flex items-center">
+<div class="h-full bg-primary-container rounded-l" style="width: 49%;"></div>
+<div class="h-full bg-error" style="width: 45%;"></div>
+</div>
+</div>
+<!-- Station Item 3 -->
+<div class="flex flex-col gap-space-3xs">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="font-medium text-on-surface">Industrial Focal, Ludhiana</span>
+<span class="font-label-mono text-caption text-secondary">Mean: <strong class="text-on-surface">122.4</strong> | 90th %ile: <strong class="text-error">242.0 µg/m³</strong></span>
+</div>
+<div class="h-5 w-full bg-surface-container rounded relative overflow-hidden flex items-center">
+<div class="h-full bg-primary-container rounded-l" style="width: 43%;"></div>
+<div class="h-full bg-error" style="width: 42%;"></div>
+</div>
+</div>
+<!-- Station Item 4 -->
+<div class="flex flex-col gap-space-3xs">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="font-medium text-on-surface">Sanjay Nagar, Ghaziabad</span>
+<span class="font-label-mono text-caption text-secondary">Mean: <strong class="text-on-surface">131.0</strong> | 90th %ile: <strong class="text-error">252.8 µg/m³</strong></span>
+</div>
+<div class="h-5 w-full bg-surface-container rounded relative overflow-hidden flex items-center">
+<div class="h-full bg-primary-container rounded-l" style="width: 46%;"></div>
+<div class="h-full bg-error" style="width: 43%;"></div>
+</div>
+</div>
+<!-- Station Item 5 -->
+<div class="flex flex-col gap-space-3xs">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="font-medium text-on-surface">Mandi Gobindgarh, Punjab</span>
+<span class="font-label-mono text-caption text-secondary">Mean: <strong class="text-on-surface">118.6</strong> | 90th %ile: <strong class="text-error">230.4 µg/m³</strong></span>
+</div>
+<div class="h-5 w-full bg-surface-container rounded relative overflow-hidden flex items-center">
+<div class="h-full bg-primary-container rounded-l" style="width: 41%;"></div>
+<div class="h-full bg-error" style="width: 40%;"></div>
+</div>
+</div>
+<!-- Station Item 6 -->
+<div class="flex flex-col gap-space-3xs">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="font-medium text-on-surface">Sec 25, Chandigarh (Baseline Resilient)</span>
+<span class="font-label-mono text-caption text-secondary">Mean: <strong class="text-on-surface">46.8</strong> | 90th %ile: <strong class="text-primary">88.5 µg/m³</strong></span>
+</div>
+<div class="h-5 w-full bg-surface-container rounded relative overflow-hidden flex items-center">
+<div class="h-full bg-primary" style="width: 16%;"></div>
+<div class="h-full bg-primary-fixed-dim" style="width: 15%;"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-secondary font-label-mono text-caption border-t border-surface-container">
+<div class="flex items-center gap-space-sm">
+<span class="flex items-center gap-space-3xs"><span class="w-2.5 h-2.5 bg-primary-container rounded"></span> Annual Mean</span>
+<span class="flex items-center gap-space-3xs"><span class="w-2.5 h-2.5 bg-error rounded"></span> Acute 90th Pctl Spike Spread</span>
+</div>
+<span>National Ambient Std NAAQS = 60 µg/m³</span>
+</div>
+</div>
+<!-- Visual 2: Scatter / Classification Quadrant Analytics -->
+<div class="lg:col-span-5 bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Exposure Risk Typology</h2>
+<span class="font-label-mono text-caption bg-surface-container px-space-xs py-space-3xs rounded text-secondary">2x2 Clustered Matrix</span>
+</div>
+<p class="font-body-md text-body-md text-secondary mt-space-3xs">
+            Differentiating persistent baseline polluters from stations triggered predominantly by seasonal combustion.
+          </p>
+</div>
+<!-- Analytical Quadrant Graphic -->
+<div class="my-space-md p-space-md bg-surface rounded-lg relative flex flex-col gap-space-sm">
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Quadrant 1: Episodic Hotspots -->
+<div class="bg-surface-container-lowest p-space-sm rounded-lg shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-caption text-secondary uppercase font-semibold">Episodic Spikes</span>
+<span class="material-symbols-outlined text-[14px] text-tertiary">bolt</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-space-3xs block">11 Stations</span>
+<p class="font-caption text-caption text-secondary mt-space-3xs">Moderate mean, extreme 90th percentile during stubble burn window.</p>
+<div class="font-label-mono text-caption text-primary font-medium mt-space-xs">e.g., Amritsar, Patiala</div>
+</div>
+<!-- Quadrant 2: Chronic Severe Hotspots -->
+<div class="bg-surface-container-lowest p-space-sm rounded-lg shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-caption text-error uppercase font-semibold">Chronic Severe</span>
+<span class="material-symbols-outlined text-[14px] text-error">warning</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-error font-semibold mt-space-3xs block">7 Stations</span>
+<p class="font-caption text-caption text-secondary mt-space-3xs">High background emission + intense inversion peaks.</p>
+<div class="font-label-mono text-caption text-error font-medium mt-space-xs">e.g., Anand Vihar, Ludhiana</div>
+</div>
+<!-- Quadrant 3: Baseline Compliant -->
+<div class="bg-surface-container-lowest p-space-sm rounded-lg shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-caption text-primary uppercase font-semibold">Stable Baseline</span>
+<span class="material-symbols-outlined text-[14px] text-primary">verified</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-primary font-semibold mt-space-3xs block">18 Stations</span>
+<p class="font-caption text-caption text-secondary mt-space-3xs">Near-constant compliance with NAAQS threshold.</p>
+<div class="font-label-mono text-caption text-primary font-medium mt-space-xs">e.g., Sec 25 Chd, Shimla</div>
+</div>
+<!-- Quadrant 4: Constant Industrial -->
+<div class="bg-surface-container-lowest p-space-sm rounded-lg shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-mono text-caption text-secondary uppercase font-semibold">Industrial Basal</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">factory</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-space-3xs block">12 Stations</span>
+<p class="font-caption text-caption text-secondary mt-space-3xs">Consistently high mean with low seasonal fluctuation.</p>
+<div class="font-label-mono text-caption text-on-surface font-medium mt-space-xs">e.g., Gobindgarh, Dharuhera</div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-xs rounded font-caption text-caption text-secondary">
+<span class="material-symbols-outlined text-[16px] text-primary">info</span>
+<span>Intervention policies must decouple episodic combustion mitigation from continuous industrial enforcement.</span>
+</div>
+</div>
+</div>
+<!-- High-Resolution Hotspot Ranking Table -->
+<div class="bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col gap-space-md">
+<!-- Table Header & Filter Toolbar -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pb-space-sm">
+<div class="flex flex-col gap-space-3xs">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Priority Station Hotspot Rankings</h2>
+<p class="font-body-md text-body-md text-secondary">Multi-parameter sorting based on 2024–2025 continuous analyzer telemetry validation.</p>
+</div>
+<!-- Filter Controls -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<!-- State Filter -->
+<div class="relative">
+<select class="h-8 pl-space-sm pr-space-xl bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:ring-1 focus:ring-primary appearance-none cursor-pointer" id="stateFilter">
+<option value="ALL">All Jurisdictions (48)</option>
+<option value="Delhi">Delhi NCT (24)</option>
+<option value="Punjab">Punjab (8)</option>
+<option value="Haryana">Haryana (12)</option>
+<option value="Chandigarh">Chandigarh UT (4)</option>
+</select>
+<span class="material-symbols-outlined absolute right-space-xs top-1/2 -translate-y-1/2 text-[16px] pointer-events-none text-secondary">expand_more</span>
+</div>
+<!-- Pollutant Indicator Filter -->
+<div class="relative">
+<select class="h-8 pl-space-sm pr-space-xl bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:ring-1 focus:ring-primary appearance-none cursor-pointer" id="pollutantFilter">
+<option value="PM25">Target: PM2.5 Priority</option>
+<option value="PM10">Target: PM10 Coarse</option>
+<option value="COMPOSITE">Composite NAAQS Index</option>
+</select>
+<span class="material-symbols-outlined absolute right-space-xs top-1/2 -translate-y-1/2 text-[16px] pointer-events-none text-secondary">expand_more</span>
+</div>
+<!-- Action Tier Filter -->
+<div class="relative">
+<select class="h-8 pl-space-sm pr-space-xl bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:ring-1 focus:ring-primary appearance-none cursor-pointer" id="tierFilter">
+<option value="ALL">All Action Tiers</option>
+<option value="Tier 1">Tier 1: Emergency Red</option>
+<option value="Tier 2">Tier 2: High Scrutiny</option>
+<option value="Tier 3">Tier 3: Moderate Risk</option>
+<option value="Tier 4">Tier 4: Monitoring Only</option>
+</select>
+<span class="material-symbols-outlined absolute right-space-xs top-1/2 -translate-y-1/2 text-[16px] pointer-events-none text-secondary">expand_more</span>
+</div>
+<button class="h-8 px-space-sm bg-primary text-on-primary rounded-lg font-label-md text-label-md flex items-center gap-space-3xs hover:bg-primary-container transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Apply Preset</span>
+</button>
+</div>
+</div>
+<!-- High Density Table -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left" id="hotspotTable">
+<thead>
+<tr class="bg-surface-container-low h-9 text-secondary font-label-mono text-caption uppercase tracking-wider">
+<th class="px-space-md font-semibold">Rank</th>
+<th class="px-space-md font-semibold">Station ID & Location</th>
+<th class="px-space-md font-semibold">City / State</th>
+<th class="px-space-md text-right font-semibold">Mean PM2.5</th>
+<th class="px-space-md text-right font-semibold">90th %ile PM2.5</th>
+<th class="px-space-md text-right font-semibold">Mean PM10</th>
+<th class="px-space-md text-right font-semibold">Data Purity</th>
+<th class="px-space-md text-right font-semibold">Exceedance %</th>
+<th class="px-space-md font-semibold text-center">Action Tier</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-md text-body-md text-on-surface">
+<!-- Row 1 -->
+<tr class="h-11 hover:bg-surface-container-low transition-colors group" data-state="Delhi" data-tier="Tier 1">
+<td class="px-space-md font-label-mono text-caption font-bold text-error">#01</td>
+<td class="px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+<div class="flex flex-col">
+<span class="font-medium text-on-surface group-hover:text-primary transition-colors">Anand Vihar</span>
+<span class="font-label-mono text-caption text-secondary">CPCB-DL-004</span>
+</div>
+</div>
+</td>
+<td class="px-space-md font-body-sm text-body-sm text-secondary">East Delhi, NCT</td>
+<td class="px-space-md text-right font-label-mono font-semibold text-on-surface">148.2 <span class="text-caption text-secondary font-normal">µg/m³</span></td>
+<td class="px-space-md text-right font-label-mono font-bold text-error">284.6 <span class="text-caption text-secondary font-normal">µg/m³</span></td>
+<td class="px-space-md text-right font-label-mono text-secondary">265.4</td>
+<td class="px-space-md text-right font-label-mono text-primary font-medium">98.4%</td>
+<td class="px-space-md text-right font-label-mono font-bold text-error">84.0%</td>
+<td class="px-space-md text-center">
+<span class="inline-flex items-center px-space-xs py-space-3xs rounded-full font-label-mono text-caption bg-[#ffdad6] text-[#ba1a1a] font-semibold">
+                  Tier 1 • Extreme
+                </span>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="h-11 hover:bg-surface-container-low transition-colors group" data-state="Delhi" data-tier="Tier 1">
+<td class="px-space-md font-label-mono text-caption font-bold text-error">#02</td>
+<td class="px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+<div class="flex flex-col">
+<span class="font-medium text-on-surface group-hover:text-primary transition-colors">Jahangirpuri</span>
+<span class="font-label-mono text-caption text-secondary">CPCB-DL-019</span>
+</div>
+</div>
+</td>
+<td class="px-space-md font-body-sm text-body-sm text-secondary">North Delhi, NCT</td>
+<td class="px-space-md text-right font-label-mono font-semibold text-on-surface">139.5 <span class="text-caption text-secondary font-normal">µg/m³</span></td>
+<td class="px-space-md text-right font-label-mono font-bold text-error">268.1 <span class="text-caption text-secondary font-normal">µg/m³</span></td>
+<td class="px-space-md text-right font-label-mono text-secondary">248.0</td>
+<td class="px-space-md text-right font-label-mono text-primary font-medium">96.8%</td>
+<td class="px-space-md text-right font-label-mono font-bold text-error">81.2%</td>
+<td class="px-space-md text-center">
+<span class="inline-flex items-center px-space-xs py-space-3xs rounded-full font-label-mono text-caption bg-[#ffdad6] text-[#ba1a1a] font-semibold">
+                  Tier 1 • Extreme
+                </span>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="h-11 hover:bg-surface-container-low transition-colors group" data-state="Punjab" data-tier="Tier 1">
+<td class="px-space-md font-label-mono text-caption font-bold text-error">#03</td>
+<td class="px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+<div class="flex flex-col">
+<span class="font-medium text-on-surface group-hover:text-primary transition-colors">Industrial Focal Point</span>
+<span class="font-label-mono text-caption text-secondary">PPCB-PB-002</span>
+</div>
+</div>
+</td>
+<td class="px-space-md font-body-sm text-body-sm text-secondary">Ludhiana, Punjab</td>
+<td class="px-space-md text-right font-label-mono font-semibold text-on-surface">122.4 <span class="text-caption text-secondary font-normal">µg/m³</span></td>
+<td class="px-space-md text-right font-label-mono font-bold text-error">242.0 <span class="text-caption text-secondary font-normal">µg/m³</span></td>
+<td class="px-space-md text-right font-label-mono text-secondary">231.5</td>
+<td class="px-space-md text-right font-label-mono text-primary font-medium">94.5%</td>
+<td class="px-space-md text-right font-label-mono font-bold text-error">78.0%</td>
+<td class="px-space-md text-center">
+<span class="inline-flex items-center px-space-xs py-space-3xs rounded-full font-label-mono text-caption bg-[#ffdad6] text-[#ba1a1a] font-semibold">
+                  Tier 1 • Extreme
+                </span>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="h-11 hover:bg-surface-container-low transition-colors group" data-state="Haryana" data-tier="Tier 1">
+<td class="px-space-md font-label-mono text-caption font-bold text-error">#04</td>
+<td class="px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+<div class="flex flex-col">
+<span class="font-medium text-on-surface group-hover:text-primary transition-colors">Sanjay Nagar</span>
+<span class="font-label-mono text-caption text-secondary">UPPCB-UP-005</span>
+</div>
+</div>
+</td>
+<td class="px-space-md font-body-sm text-body-sm text-secondary">Ghaziabad, NCR</td>
+<td class="px-space-md text-right font-label-mono font-semibold text-on-surface">131.0 <span class="text-caption text-secondary font-normal">µg/m³</span></td>
+<td class="px-space-md text-right font-label-mono font-bold text-error">252.8 <span class="text-caption text-secondary font-normal">µg/m³</span></td>
+<td class="px-space-md text-right font-label-mono text-secondary">242.1</td>
+<td class="px-space-md text-right font-label-mono text-primary font-medium">97.2%</td>
+<td class="px-space-md text-right font-label-mono font-bold text-error">76.4%</td>
+<td class="px-space-md text-center">
+<span class="inline-flex items-center px-space-xs py-space-3xs rounded-full font-label-mono text-caption bg-[#ffdad6] text-[#ba1a1a] font-semibold">
+                  Tier 1 • Extreme
+                </span>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="h-11 hover:bg-surface-container-low transition-colors group" data-state="Haryana" data-tier="Tier 2">
+<td class="px-space-md font-label-mono text-caption font-semibold text-secondary">#05</td>
+<td class="px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-[#BA6828]"></span>
+<div class="flex flex-col">
+<span class="font-medium text-on-surface group-hover:text-primary transition-colors">Sector 62</span>
+<span class="font-label-mono text-caption text-secondary">UPPCB-UP-012</span>
+</div>
+</div>
+</td>
+<td class="px-space-md font-body-sm text-body-sm text-secondary">Noida, NCR</td>
+<td class="px-space-md text-right font-label-mono font-semibold text-on-surface">125.8 <span class="text-caption text-secondary font-normal">µg/m³</span></td>
+<td class="px-space-md text-right font-label-mono font-semibold text-on-surface">238.4 <span class="text-caption text-secondary font-normal">µg/m³</span></td>
+<td class="px-space-md text-right font-label-mono text-secondary">218.6</td>
+<td class="px-space-md text-right font-label-mono text-primary font-medium">99.1%</td>
+<td class="px-space-md text-right font-label-mono font-semibold text-on-surface">74.2%</td>
+<td class="px-space-md text-center">
+<span class="inline-flex items-center px-space-xs py-space-3xs rounded-full font-label-mono text-caption bg-surface-container-high text-secondary font-medium">
+                  Tier 2 • High Scrutiny
+                </span>
+</td>
+</tr>
+<!-- Row 6 -->
+<tr class="h-11 hover:bg-surface-container-low transition-colors group" data-state="Haryana" data-tier="Tier 2">
+<td class="px-space-md font-label-mono text-caption font-semibold text-secondary">#06</td>
+<td class="px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-[#BA6828]"></span>
+<div class="flex flex-col">
+<span class="font-medium text-on-surface group-hover:text-primary transition-colors">Vikas Sadan</span>
+<span class="font-label-mono text-caption text-secondary">HSPCB-HR-003</span>
+</div>
+</div>
+</td>
+<td class="px-space-md font-body-sm text-body-sm text-secondary">Gurugram, Haryana</td>
+<td class="px-space-md text-right font-label-mono font-semibold text-on-surface">118.2 <span class="text-caption text-secondary font-normal">µg/m³</span></td>
+<td class="px-space-md text-right font-label-mono font-semibold text-on-surface">224.5 <span class="text-caption text-secondary font-normal">µg/m³</span></td>
+<td class="px-space-md text-right font-label-mono text-secondary">209.4</td>
+<td class="px-space-md text-right font-label-mono text-primary font-medium">95.4%</td>
+<td class="px-space-md text-right font-label-mono font-semibold text-on-surface">71.0%</td>
+<td class="px-space-md text-center">
+<span class="inline-flex items-center px-space-xs py-space-3xs rounded-full font-label-mono text-caption bg-surface-container-high text-secondary font-medium">
+                  Tier 2 • High Scrutiny
+                </span>
+</td>
+</tr>
+<!-- Row 7 -->
+<tr class="h-11 hover:bg-surface-container-low transition-colors group" data-state="Punjab" data-tier="Tier 2">
+<td class="px-space-md font-label-mono text-caption font-semibold text-secondary">#07</td>
+<td class="px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-[#BA6828]"></span>
+<div class="flex flex-col">
+<span class="font-medium text-on-surface group-hover:text-primary transition-colors">Mandi Gobindgarh</span>
+<span class="font-label-mono text-caption text-secondary">PPCB-PB-006</span>
+</div>
+</div>
+</td>
+<td class="px-space-md font-body-sm text-body-sm text-secondary">Fatehgarh Sahib, PB</td>
+<td class="px-space-md text-right font-label-mono font-semibold text-on-surface">118.6 <span class="text-caption text-secondary font-normal">µg/m³</span></td>
+<td class="px-space-md text-right font-label-mono font-semibold text-on-surface">230.4 <span class="text-caption text-secondary font-normal">µg/m³</span></td>
+<td class="px-space-md text-right font-label-mono text-secondary">228.0</td>
+<td class="px-space-md text-right font-label-mono text-primary font-medium">93.2%</td>
+<td class="px-space-md text-right font-label-mono font-semibold text-on-surface">69.5%</td>
+<td class="px-space-md text-center">
+<span class="inline-flex items-center px-space-xs py-space-3xs rounded-full font-label-mono text-caption bg-surface-container-high text-secondary font-medium">
+                  Tier 2 • High Scrutiny
+                </span>
+</td>
+</tr>
+<!-- Row 8 -->
+<tr class="h-11 hover:bg-surface-container-low transition-colors group" data-state="Punjab" data-tier="Tier 3">
+<td class="px-space-md font-label-mono text-caption font-medium text-secondary">#08</td>
+<td class="px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-[#707973]"></span>
+<div class="flex flex-col">
+<span class="font-medium text-on-surface group-hover:text-primary transition-colors">Golden Temple</span>
+<span class="font-label-mono text-caption text-secondary">PPCB-PB-001</span>
+</div>
+</div>
+</td>
+<td class="px-space-md font-body-sm text-body-sm text-secondary">Amritsar, Punjab</td>
+<td class="px-space-md text-right font-label-mono font-semibold text-on-surface">88.4 <span class="text-caption text-secondary font-normal">µg/m³</span></td>
+<td class="px-space-md text-right font-label-mono font-semibold text-on-surface">192.0 <span class="text-caption text-secondary font-normal">µg/m³</span></td>
+<td class="px-space-md text-right font-label-mono text-secondary">164.2</td>
+<td class="px-space-md text-right font-label-mono text-primary font-medium">97.0%</td>
+<td class="px-space-md text-right font-label-mono font-medium text-secondary">58.0%</td>
+<td class="px-space-md text-center">
+<span class="inline-flex items-center px-space-xs py-space-3xs rounded-full font-label-mono text-caption bg-surface-container text-secondary">
+                  Tier 3 • Moderate Risk
+                </span>
+</td>
+</tr>
+<!-- Row 9 -->
+<tr class="h-11 hover:bg-surface-container-low transition-colors group" data-state="Punjab" data-tier="Tier 3">
+<td class="px-space-md font-label-mono text-caption font-medium text-secondary">#09</td>
+<td class="px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-[#707973]"></span>
+<div class="flex flex-col">
+<span class="font-medium text-on-surface group-hover:text-primary transition-colors">Phase 7, Mohali</span>
+<span class="font-label-mono text-caption text-secondary">PPCB-PB-008</span>
+</div>
+</div>
+</td>
+<td class="px-space-md font-body-sm text-body-sm text-secondary">SAS Nagar, Punjab</td>
+<td class="px-space-md text-right font-label-mono font-semibold text-on-surface">68.2 <span class="text-caption text-secondary font-normal">µg/m³</span></td>
+<td class="px-space-md text-right font-label-mono font-semibold text-on-surface">144.5 <span class="text-caption text-secondary font-normal">µg/m³</span></td>
+<td class="px-space-md text-right font-label-mono text-secondary">128.0</td>
+<td class="px-space-md text-right font-label-mono text-primary font-medium">96.0%</td>
+<td class="px-space-md text-right font-label-mono font-medium text-secondary">42.1%</td>
+<td class="px-space-md text-center">
+<span class="inline-flex items-center px-space-xs py-space-3xs rounded-full font-label-mono text-caption bg-surface-container text-secondary">
+                  Tier 3 • Moderate Risk
+                </span>
+</td>
+</tr>
+<!-- Row 10 -->
+<tr class="h-11 hover:bg-surface-container-low transition-colors group" data-state="Chandigarh" data-tier="Tier 4">
+<td class="px-space-md font-label-mono text-caption font-medium text-primary">#10</td>
+<td class="px-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<div class="flex flex-col">
+<span class="font-medium text-on-surface group-hover:text-primary transition-colors">Sector 25</span>
+<span class="font-label-mono text-caption text-secondary">CPCB-CH-002</span>
+</div>
+</div>
+</td>
+<td class="px-space-md font-body-sm text-body-sm text-secondary">Chandigarh UT</td>
+<td class="px-space-md text-right font-label-mono font-semibold text-primary">46.8 <span class="text-caption text-secondary font-normal">µg/m³</span></td>
+<td class="px-space-md text-right font-label-mono font-semibold text-primary">88.5 <span class="text-caption text-secondary font-normal">µg/m³</span></td>
+<td class="px-space-md text-right font-label-mono text-secondary">92.0</td>
+<td class="px-space-md text-right font-label-mono text-primary font-medium">99.4%</td>
+<td class="px-space-md text-right font-label-mono font-bold text-primary">22.0%</td>
+<td class="px-space-md text-center">
+<span class="inline-flex items-center px-space-xs py-space-3xs rounded-full font-label-mono text-caption bg-primary-fixed/30 text-primary font-semibold">
+                  Tier 4 • Resilient
+                </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination & Telemetry Footer -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pt-space-xs text-secondary font-body-sm">
+<span class="font-label-mono text-caption">Showing 10 of 48 calibrated northern continuous stations</span>
+<div class="flex items-center gap-space-xs">
+<button class="h-8 px-space-sm bg-surface-container hover:bg-surface-container-high rounded text-on-surface font-label-mono text-caption disabled:opacity-50" disabled="">Previous</button>
+<span class="font-label-mono text-caption px-space-xs text-on-surface font-semibold">Page 1 of 5</span>
+<button class="h-8 px-space-sm bg-surface-container hover:bg-surface-container-high rounded text-on-surface font-label-mono text-caption">Next</button>
+</div>
+</div>
+</div>
+<!-- Analytical Note & Methodological Disclosure -->
+<div class="bg-surface-container-low p-space-lg rounded-xl flex flex-col md:flex-row items-start gap-space-md shadow-sm">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">science</span>
+</div>
+<div class="flex flex-col gap-space-3xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Hotspot Computation Methodology & Mathematical Basis</h3>
+<p class="font-body-md text-body-md text-secondary leading-relaxed">
+          The Persistence Index computes the frequency proportion of valid calendar days where PM2.5 concentrations surpass the National Ambient Air Quality Standard (60 µg/m³ 24h baseline). 
+          Acute risk envelopes are derived using empirical 90th percentile rankings calculated strictly over high-completeness records (>85% valid temporal capture). 
+          This intelligence matrix distinguishes localized point-source plumes from regional meteorology-driven inversions across the Indo-Gangetic Plains.
+        </p>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Table Filtering Micro-interaction
+  document.addEventListener('DOMContentLoaded', () => {
+    const stateFilter = document.getElementById('stateFilter');
+    const tierFilter = document.getElementById('tierFilter');
+    const tableRows = document.querySelectorAll('#hotspotTable tbody tr');
+
+    function filterTable() {
+      const selectedState = stateFilter.value;
+      const selectedTier = tierFilter.value;
+
+      tableRows.forEach(row => {
+        const rowState = row.getAttribute('data-state');
+        const rowTier = row.getAttribute('data-tier');
+
+        const stateMatch = selectedState === 'ALL' || rowState === selectedState;
+        const tierMatch = selectedTier === 'ALL' || rowTier.includes(selectedTier);
+
+        if (stateMatch && tierMatch) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    }
+
+    if (stateFilter) stateFilter.addEventListener('change', filterTable);
+    if (tierFilter) tierFilter.addEventListener('change', filterTable);
+  });
+</script></main></div></body></html>

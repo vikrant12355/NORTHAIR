@@ -1,0 +1,234 @@
+{
+  "summary": {
+    "stations_count": 48,
+    "air_quality_2025_rows": 414255,
+    "aqi_history_rows": 102744
+  },
+  "duplicates": {
+    "stations_csv": {
+      "total_rows": 48,
+      "exact_duplicates": 0,
+      "station_id_duplicates": 0
+    },
+    "air_quality_hourly_2025": {
+      "total_rows": 414255,
+      "exact_duplicates": 0,
+      "station_timestamp_duplicates": 0
+    },
+    "aqi_history_2017_2023": {
+      "total_rows": 102744,
+      "exact_duplicates": 0,
+      "station_date_duplicates": 42257
+    }
+  },
+  "station_integrity": {
+    "unique_stations_count": {
+      "stations_metadata": 48,
+      "air_quality_2025": 48,
+      "aqi_history": 31
+    },
+    "unmatched_stations": {
+      "in_stations_not_in_air_quality_2025": [],
+      "in_air_quality_2025_not_in_stations": [],
+      "in_stations_not_in_aqi_history": [
+        "site_1420",
+        "site_1422",
+        "site_1426",
+        "site_1429",
+        "site_1431",
+        "site_1434",
+        "site_146",
+        "site_263",
+        "site_5025",
+        "site_5045",
+        "site_5050",
+        "site_5127",
+        "site_5340",
+        "site_5342",
+        "site_5345",
+        "site_5491",
+        "site_6011"
+      ],
+      "in_aqi_history_not_in_stations": []
+    },
+    "stations_with_multiple_names_in_history": {
+      "site_5046": {
+        "name_count": 40,
+        "sample_names": [
+          "Adarsh Nagar Jaipur RSPCB",
+          "Anthoni Pillai Nagar Gummidipoondi TNPCB",
+          "Arya Nagar Bahadurgarh HSPCB",
+          "Ashwini Nagar Haveri KSPCB",
+          "Darshan Nagar Chhapra BSPCB"
+        ]
+      },
+      "site_5341": {
+        "name_count": 4,
+        "sample_names": [
+          "New Industrial Town Faridabad HSPCB",
+          "Sector 11 Faridabad HSPCB",
+          "Sector 30 Faridabad HSPCB",
+          "Sector- 16A Faridabad HSPCB"
+        ]
+      },
+      "site_5344": {
+        "name_count": 4,
+        "sample_names": [
+          "NISE Gwal Pahari Gurugram IMD",
+          "Sector-51 Gurugram HSPCB",
+          "Teri Gram Gurugram HSPCB",
+          "Vikas Sadan Gurugram HSPCB"
+        ]
+      },
+      "site_5582": {
+        "name_count": 3,
+        "sample_names": [
+          "Sector 22 Chandigarh CPCC",
+          "Sector-25 Chandigarh CPCC",
+          "Sector-53 Chandigarh CPCC"
+        ]
+      }
+    },
+    "state_distribution": {
+      "Haryana": 31,
+      "Punjab": 8,
+      "Delhi": 6,
+      "Chandigarh": 3
+    },
+    "city_distribution": {
+      "Delhi": 6,
+      "Faridabad": 4,
+      "Gurugram": 4,
+      "Chandigarh": 3,
+      "Ambala": 1,
+      "Bahadurgarh": 1,
+      "Ballabgarh": 1,
+      "Charkhi Dadri": 1,
+      "Bhiwani": 1,
+      "Dharuhera": 1,
+      "Fatehabad": 1,
+      "Hisar": 1,
+      "Jind": 1,
+      "Kaithal": 1,
+      "Karnal": 1,
+      "Kurukshetra ": 1,
+      "Mandikhera": 1,
+      "Manesar": 1,
+      "Narnaul": 1,
+      "Palwal ": 1,
+      "Panchgaon": 1,
+      "Panchkula": 1,
+      "Panipat": 1,
+      "Rohtak": 1,
+      "Sirsa": 1,
+      "Sonipat": 1,
+      "Yamuna Nagar": 1,
+      "Amritsar": 1,
+      "Bathinda": 1,
+      "Jalandhar": 1,
+      "Khanna": 1,
+      "Ludhiana": 1,
+      "Mandi Gobindgarh": 1,
+      "Patiala": 1,
+      "Rupnagar": 1
+    }
+  },
+  "timestamps": {
+    "air_quality_hourly_2025": {
+      "total_rows": 414255,
+      "null_timestamps": 0,
+      "invalid_timestamps": 0,
+      "min_timestamp_utc": "2025-01-01 00:00:00",
+      "max_timestamp_utc": "2025-12-31 23:00:00"
+    },
+    "aqi_history_2017_2023": {
+      "date_column_name": "Date",
+      "total_rows": 102744,
+      "null_dates": 0,
+      "invalid_dates": 0,
+      "min_date": "2017-01-01",
+      "max_date": "2023-12-31"
+    }
+  },
+  "numerical_flags": [
+    {
+      "column": "PM2.5 (\u00b5g/m\u00b3)",
+      "flags": [
+        "Max value 999.99 indicates potential sensor saturation/clipping at 999.0"
+      ]
+    },
+    {
+      "column": "PM10 (\u00b5g/m\u00b3)",
+      "flags": [
+        "Max value 1000.0 indicates potential sensor saturation/clipping at 1000.0"
+      ]
+    },
+    {
+      "column": "NO (\u00b5g/m\u00b3)",
+      "flags": [
+        "Max value 496.8 indicates potential sensor saturation/clipping at 490.0"
+      ]
+    },
+    {
+      "column": "NO2 (\u00b5g/m\u00b3)",
+      "flags": [
+        "Max value 497.13 indicates potential sensor saturation/clipping at 490.0"
+      ]
+    },
+    {
+      "column": "NOx (ppb)",
+      "flags": [
+        "Max value 499.4 indicates potential sensor saturation/clipping at 499.0"
+      ]
+    },
+    {
+      "column": "NH3 (\u00b5g/m\u00b3)",
+      "flags": [
+        "Max value 499.68 indicates potential sensor saturation/clipping at 499.0"
+      ]
+    },
+    {
+      "column": "SO2 (\u00b5g/m\u00b3)",
+      "flags": [
+        "Max value 198.22 indicates potential sensor saturation/clipping at 195.0"
+      ]
+    },
+    {
+      "column": "CO (mg/m\u00b3)",
+      "flags": [
+        "Max value 10.0 indicates potential sensor saturation/clipping at 10.0"
+      ]
+    },
+    {
+      "column": "Ozone (\u00b5g/m\u00b3)",
+      "flags": [
+        "Max value 495.4 indicates potential sensor saturation/clipping at 495.0"
+      ]
+    },
+    {
+      "column": "WS (m/s)",
+      "flags": [
+        "Max value 49.74 exceeds standard physical boundary 40.0"
+      ]
+    },
+    {
+      "column": "SR (W/mt2)",
+      "flags": [
+        "Max value 1502.9 exceeds standard physical boundary 1400.0"
+      ]
+    },
+    {
+      "column": "BP (mmHg)",
+      "flags": [
+        "Max value 1069.3 exceeds standard physical boundary 800.0"
+      ]
+    },
+    {
+      "column": "VWS (m/s)",
+      "flags": [
+        "Contains 5950 negative values (indicates downdraft/subsidence in VWS)",
+        "Min value -4.1 is below physical boundary 0.0"
+      ]
+    }
+  ]
+}

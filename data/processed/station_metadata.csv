@@ -1,0 +1,49 @@
+State,Station ID,City,Station Name,Hours_Recorded_2025,Min_UTC_2025,Max_UTC_2025,In_2025_Data,Days_Recorded_History,Min_Date_History,Max_Date_History,In_Historical_Data
+Chandigarh,site_5127,Chandigarh,"Sector-25, Chandigarh - CPCC",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,0,,,False
+Chandigarh,site_5491,Chandigarh,"Sector 22, Chandigarh - CPCC",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,0,,,False
+Chandigarh,site_5582,Chandigarh,"Sector-53, Chandigarh - CPCC",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,3142,2019-08-01,2023-12-31,True
+Delhi,site_1420,Delhi,"Ashok Vihar, Delhi - DPCC",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,0,,,False
+Delhi,site_1422,Delhi,"Dwarka-Sector 8, Delhi - DPCC ",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,0,,,False
+Delhi,site_1426,Delhi,"Narela, Delhi - DPCC",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,0,,,False
+Delhi,site_1429,Delhi,"Nehru Nagar, Delhi - DPCC",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,0,,,False
+Delhi,site_1431,Delhi,"Patparganj, Delhi - DPCC",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,0,,,False
+Delhi,site_1434,Delhi,"Wazirpur, Delhi - DPCC",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,0,,,False
+Haryana,site_5052,Ambala,"Patti Mehar, Ambala - HSPCB",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,1770,2019-01-02,2023-12-31,True
+Haryana,site_5045,Bahadurgarh,"Arya Nagar, Bahadurgarh - HSPCB",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,0,,,False
+Haryana,site_5060,Ballabgarh,"Nathu Colony, Ballabgarh - HSPCB",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,1787,2019-01-08,2023-12-31,True
+Haryana,site_5047,Bhiwani,"H.B. Colony, Bhiwani - HSPCB",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,1792,2019-01-01,2023-12-31,True
+Haryana,site_5339,Charkhi Dadri,"Mini Secretariat, Charkhi Dadri - HSPCB",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,1315,2020-03-03,2023-12-31,True
+Haryana,site_5044,Dharuhera,"Municipal Corporation Office, Dharuhera -  HSPCB",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,1792,2019-01-04,2023-12-31,True
+Haryana,site_263,Faridabad,"Sector- 16A, Faridabad - HSPCB",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,0,,,False
+Haryana,site_5340,Faridabad,"New Industrial Town, Faridabad - HSPCB",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,0,,,False
+Haryana,site_5341,Faridabad,"Sector 30, Faridabad - HSPCB",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,6080,2017-01-01,2023-12-31,True
+Haryana,site_5342,Faridabad,"Sector 11, Faridabad - HSPCB",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,0,,,False
+Haryana,site_5054,Fatehabad,"Huda Sector, Fatehabad - HSPCB",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,1722,2019-01-01,2023-12-31,True
+Haryana,site_146,Gurugram,"Vikas Sadan, Gurugram - HSPCB",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,0,,,False
+Haryana,site_5025,Gurugram,"NISE Gwal Pahari, Gurugram - IMD",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,0,,,False
+Haryana,site_5344,Gurugram,"Teri Gram, Gurugram - HSPCB",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,6767,2017-01-01,2023-12-31,True
+Haryana,site_5345,Gurugram,"Sector-51, Gurugram - HSPCB",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,0,,,False
+Haryana,site_5057,Hisar,"Urban Estate-II, Hisar - HSPCB",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,1778,2019-01-01,2023-12-31,True
+Haryana,site_5056,Jind,"Police Lines, Jind - HSPCB",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,1812,2019-01-01,2023-12-31,True
+Haryana,site_5072,Kaithal,"Rishi Nagar, Kaithal - HSPCB",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,1785,2019-02-01,2023-12-31,True
+Haryana,site_5049,Karnal,"Sector-12, Karnal - HSPCB",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,1810,2019-01-01,2023-12-31,True
+Haryana,site_5043,Kurukshetra ,"Sector-7, Kurukshetra - HSPCB",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,1814,2019-01-07,2023-12-31,True
+Haryana,site_5055,Mandikhera,"General Hospital, Mandikhera(Nuh) - HSPCB",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,1765,2019-01-01,2023-12-31,True
+Haryana,site_5039,Manesar,"Sector-2 IMT, Manesar - HSPCB",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,1834,2018-12-01,2023-12-31,True
+Haryana,site_5053,Narnaul,"Shastri Nagar, Narnaul - HSPCB",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,1789,2019-01-01,2023-12-31,True
+Haryana,site_5050,Palwal ,"Shyam Nagar, Palwal - HSPCB",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,0,,,False
+Haryana,site_6011,Panchgaon,"Amity University, Panchgaon - IITM",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,0,,,False
+Haryana,site_161,Panchkula,"Sector-6, Panchkula - HSPCB ",2957,2025-01-01 00:00:00,2025-12-31 23:00:00,True,2225,2017-09-25,2023-12-31,True
+Haryana,site_5048,Panipat,"Sector-18, Panipat - HSPCB",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,1706,2019-01-01,2023-12-31,True
+Haryana,site_147,Rohtak,"MD University, Rohtak - HSPCB",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,2227,2017-09-21,2023-12-31,True
+Haryana,site_5051,Sirsa,"F-Block, Sirsa - HSPCB",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,1784,2019-01-02,2023-12-31,True
+Haryana,site_5041,Sonipat,"Murthal, Sonipat - HSPCB",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,1746,2018-12-23,2023-12-31,True
+Haryana,site_5046,Yamuna Nagar,"Gobind Pura, Yamuna Nagar - HSPCB",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,35066,2017-09-22,2023-12-31,True
+Punjab,site_256,Amritsar,"Golden Temple, Amritsar - PPCB",8494,2025-01-01 00:00:00,2025-12-31 23:00:00,True,2366,2017-03-02,2023-12-31,True
+Punjab,site_1549,Bathinda,"Hardev Nagar, Bathinda - PPCB",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,1982,2018-06-01,2023-12-31,True
+Punjab,site_1438,Jalandhar,"Civil Line, Jalandhar - PPCB",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,2153,2018-02-02,2023-12-31,True
+Punjab,site_1450,Khanna,"Kalal Majra, Khanna - PPCB",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,2081,2018-04-01,2023-12-31,True
+Punjab,site_253,Ludhiana,"Punjab Agricultural University, Ludhiana - PPCB",8604,2025-01-01 00:00:00,2025-12-31 23:00:00,True,2345,2017-04-02,2023-12-31,True
+Punjab,site_255,Mandi Gobindgarh,"RIMT University, Mandi Gobindgarh - PPCB",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,2353,2017-03-02,2023-12-31,True
+Punjab,site_1437,Patiala,"Model Town, Patiala - PPCB",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,2157,2018-02-02,2023-12-31,True
+Punjab,site_1538,Rupnagar,"Ratanpura, Rupnagar - Ambuja Cements",8760,2025-01-01 00:00:00,2025-12-31 23:00:00,True,1999,2018-04-02,2023-12-31,True

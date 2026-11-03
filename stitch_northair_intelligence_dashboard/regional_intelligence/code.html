@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary-fixed":"#adf1cc","surface-container":"#ebefe8","secondary-fixed-dim":"#c0c9c3","surface-bright":"#f6fbf4","inverse-primary":"#91d5b1","surface-container-lowest":"#ffffff","on-primary-container":"#a5e9c4","on-secondary-container":"#5e6662","on-tertiary-fixed":"#151d19","inverse-surface":"#2d322d","secondary":"#58605c","error":"#ba1a1a","primary-fixed-dim":"#91d5b1","on-error":"#ffffff","on-error-container":"#93000a","on-primary-fixed":"#002113","surface-container-high":"#e5e9e3","surface-container-low":"#f0f5ee","tertiary-fixed-dim":"#bfc9c1","surface-tint":"#276a4d","surface-container-highest":"#dfe4dd","on-secondary-fixed-variant":"#404945","on-background":"#181d19","on-secondary-fixed":"#151d1a","secondary-fixed":"#dce5df","on-primary":"#ffffff","surface-dim":"#d7dbd5","background":"#f6fbf4","on-surface":"#181d19","inverse-on-surface":"#eef2eb","error-container":"#ffdad6","surface":"#f6fbf4","outline-variant":"#bfc9c1","on-primary-fixed-variant":"#035136","tertiary-container":"#58625c","on-tertiary-fixed-variant":"#3f4943","tertiary-fixed":"#dbe5dd","on-tertiary":"#ffffff","primary":"#055237","primary-container":"#286b4e","tertiary":"#414a44","on-tertiary-container":"#d3ddd5","surface-variant":"#dfe4dd","outline":"#707973","secondary-container":"#dce5df","on-surface-variant":"#404943","on-secondary":"#ffffff"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"gutter-desktop":"1.5rem","margin-tablet":"1.5rem",margin:"1rem","space-3xs":"0.125rem","space-3xl":"3rem","space-lg":"1.25rem",gutter:"1rem","space-md":"0.75rem","space-base":"1rem","space-2xl":"2rem","space-2xs":"0.25rem","space-sm":"0.5rem","space-xl":"1.5rem","margin-desktop":"2.5rem","space-xs":"0.375rem"},fontFamily:{"display-hero":["Inter"],"body-lg":["Inter"],"display-hero-mobile":["Inter"],"headline-lg":["Inter"],"body-md":["Inter"],"metric-display":["Inter"],caption:["Inter"],"label-mono":["Inter"],"body-sm":["Inter"],"headline-sm":["Inter"],"metric-display-sm":["Inter"],"headline-md":["Inter"],"headline-lg-mobile":["Inter"],"label-md":["Inter"]},fontSize:{"display-hero":["44px",{lineHeight:"52px",letterSpacing:"-0.03em",fontWeight:"600"}],"body-lg":["15px",{lineHeight:"22px",letterSpacing:"-0.01em",fontWeight:"400"}],"display-hero-mobile":["32px",{lineHeight:"40px",letterSpacing:"-0.025em",fontWeight:"600"}],"headline-lg":["30px",{lineHeight:"38px",letterSpacing:"-0.025em",fontWeight:"600"}],"body-md":["13px",{lineHeight:"18px",letterSpacing:"-0.005em",fontWeight:"400"}],"metric-display":["36px",{lineHeight:"40px",letterSpacing:"-0.03em",fontWeight:"500"}],caption:["11px",{lineHeight:"14px",letterSpacing:"0.01em",fontWeight:"400"}],"label-mono":["11px",{lineHeight:"14px",letterSpacing:"0.04em",fontWeight:"500"}],"body-sm":["12px",{lineHeight:"16px",letterSpacing:"0em",fontWeight:"400"}],"headline-sm":["18px",{lineHeight:"24px",letterSpacing:"-0.015em",fontWeight:"600"}],"metric-display-sm":["24px",{lineHeight:"28px",letterSpacing:"-0.02em",fontWeight:"500"}],"headline-md":["22px",{lineHeight:"28px",letterSpacing:"-0.02em",fontWeight:"600"}],"headline-lg-mobile":["24px",{lineHeight:"32px",letterSpacing:"-0.02em",fontWeight:"600"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.01em",fontWeight:"500"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="p-space-lg flex flex-col gap-space-xs"><div class="flex items-center gap-space-sm"><img alt="NorthAir Intelligence Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Xd9gd8agIIi-ek_ykPUVCTi4o3gAGsaCWmAbx7Uc6CHKyE5qR4qU-2uzA26dUSb6n7Wxt6XYIlwDV9vkPCDMtB-1vSamy3vQNhtVtNDofykbIvaWibIBmEuuBTbiUCbRb1Vu1vgaYePltaiIawTZr6N2n_EsSHeGgCJ7oH7FccX6hQ2g_eSA_lNmFMRCNQp0DvC5L3LPXhg1svNcfP2O3_GQgL3nIlEegUQEiXqg"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-semibold leading-none">NORTHAIR</span><span class="font-label-mono text-caption text-secondary tracking-widest leading-none mt-space-3xs">INTELLIGENCE</span></div></div><p class="font-caption text-caption text-outline leading-tight mt-space-xs">Understanding Air. Revealing Patterns. Enabling Decisions.</p><div class="flex items-center gap-space-xs mt-space-xs py-space-3xs px-space-xs bg-surface-container-low rounded-lg"><span class="h-2 w-2 rounded-full bg-primary animate-pulse"></span><span class="font-label-mono text-caption text-on-surface-variant font-medium">48 Stations Online • N. India Net</span></div></div><nav class="flex flex-col gap-space-3xs px-space-md mt-space-xs" data-active-classes="bg-primary-container text-on-primary font-medium rounded-lg shadow-sm"><span class="font-label-mono text-caption text-outline px-space-sm py-space-3xs uppercase tracking-wider">Intelligence Matrix</span><a class="flex items-center gap-space-md px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="overview" href="#"><span class="material-symbols-outlined text-[18px]">dashboard</span><span class="font-body-md text-body-md">Overview</span></a><a aria-current="page" class="flex items-center gap-space-md px-space-sm py-space-xs transition-colors bg-primary-container text-on-primary font-medium rounded-lg shadow-sm" data-path="regional-intelligence" href="#"><span class="material-symbols-outlined text-[18px]">map</span><span class="font-body-md text-body-md">Regional Intelligence</span></a><a class="flex items-center gap-space-md px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="hotspot-explorer" href="#"><span class="material-symbols-outlined text-[18px]">radar</span><span class="font-body-md text-body-md">Hotspot Explorer</span></a><a class="flex items-center gap-space-md px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="pollutant-analytics" href="#"><span class="material-symbols-outlined text-[18px]">bubble_chart</span><span class="font-body-md text-body-md">Pollutant Analytics</span></a><a class="flex items-center gap-space-md px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="weather-intelligence" href="#"><span class="material-symbols-outlined text-[18px]">air</span><span class="font-body-md text-body-md">Weather Intelligence</span></a><a class="flex items-center gap-space-md px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="historical-aqi" href="#"><span class="material-symbols-outlined text-[18px]">history</span><span class="font-body-md text-body-md">Historical AQI</span></a><a class="flex items-center gap-space-md px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="predictive-intelligence" href="#"><span class="material-symbols-outlined text-[18px]">auto_graph</span><span class="font-body-md text-body-md">Predictive Intelligence</span></a><a class="flex items-center gap-space-md px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="insights-and-reports" href="#"><span class="material-symbols-outlined text-[18px]">analytics</span><span class="font-body-md text-body-md">Insights & Reports</span></a></nav></div><div class="p-space-md flex flex-col gap-space-3xs"><span class="font-label-mono text-caption text-outline px-space-sm py-space-3xs uppercase tracking-wider">System & Registry</span><nav class="flex flex-col gap-space-3xs" data-active-classes="bg-primary-container text-on-primary font-medium rounded-lg shadow-sm"><a class="flex items-center gap-space-md px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="documentation" href="#"><span class="material-symbols-outlined text-[18px]">menu_book</span><span class="font-body-md text-body-md">Documentation</span></a><a class="flex items-center gap-space-md px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="about-project" href="#"><span class="material-symbols-outlined text-[18px]">info</span><span class="font-body-md text-body-md">About Project</span></a><a class="flex items-center gap-space-md px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="system-settings" href="#"><span class="material-symbols-outlined text-[18px]">settings</span><span class="font-body-md text-body-md">System Settings</span></a></nav><div class="mt-space-sm pt-space-xs px-space-sm flex items-center justify-between text-outline"><span class="font-caption text-caption">v4.2 CPCB Core</span><span class="font-caption text-caption">Chandigarh HQ</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-gutter-desktop"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><span class="font-medium text-secondary">Telemetry</span><span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span><span class="font-medium text-primary">Northern India Grid</span></div><div class="h-4 w-[1px] bg-outline-variant"></div><div class="flex items-center gap-space-xs px-space-sm py-space-3xs bg-primary-fixed/20 text-on-primary-fixed-variant rounded-full"><span class="h-1.5 w-1.5 rounded-full bg-primary-container animate-pulse"></span><span class="font-label-mono text-caption font-semibold">All 48 Stations Operational</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-low rounded-lg text-on-surface-variant"><span class="material-symbols-outlined text-[16px] text-primary">sync</span><span class="font-caption text-caption font-medium">2025 Live Validation & CPCB Synced</span><span class="material-symbols-outlined text-[14px]">expand_more</span></div><button class="flex items-center gap-space-xs h-8 px-space-md bg-surface-container-lowest hover:bg-surface-container text-on-surface rounded-lg shadow-sm font-label-md text-label-md transition-colors"><span class="material-symbols-outlined text-[16px] text-primary">download</span><span>Export Analytical Report</span></button><div class="h-5 w-[1px] bg-outline-variant"></div><div class="flex items-center gap-space-xs cursor-pointer"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span class="material-symbols-outlined text-on-surface-variant text-[16px]">arrow_drop_down</span></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="px-gutter-desktop py-space-xl flex flex-col gap-space-2xl max-w-[1680px] mx-auto w-full">
+<!-- Top Action / Context Bar -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center gap-space-xs font-label-mono text-label-mono text-outline uppercase tracking-wider">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span>Regulatory Intelligence • Tier-1 Geographical Mesh</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Regional Air Quality Intelligence</h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-3xl">Comparative geographical analysis across 4 territories: Chandigarh, Punjab, Haryana, and Delhi National Capital Territory.</p>
+</div>
+<div class="flex items-center gap-space-sm self-start md:self-auto">
+<div class="flex items-center bg-surface-container-low px-space-sm py-space-2xs rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary mr-space-xs">schedule</span>
+<span class="font-caption text-caption text-on-surface-variant font-medium">Aggregated: Past 24h Synchronized</span>
+</div>
+<button class="flex items-center gap-space-xs px-space-md py-space-2xs bg-primary text-on-primary rounded-lg shadow-sm hover:bg-primary-container transition-all text-label-md font-label-md" id="toggle-calibration">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Calibrate Baseline</span>
+</button>
+</div>
+</div>
+<!-- 4 Territorial KPI Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+<!-- Chandigarh -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between group cursor-pointer" onclick="selectTerritory('Chandigarh')">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-mono text-label-mono text-outline uppercase">Territory 01 / Foothills</span>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-space-3xs font-semibold">Chandigarh UT</span>
+</div>
+<span class="inline-flex items-center px-space-xs py-space-3xs rounded-full bg-primary-fixed/30 text-on-primary-fixed-variant text-caption font-label-mono font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-primary mr-1.5"></span>Satisfactory
+          </span>
+</div>
+<div class="my-space-md">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-metric-display text-metric-display text-on-surface font-semibold tracking-tight">52.1</span>
+<span class="font-body-sm text-body-sm text-secondary font-medium">µg/m³ PM2.5</span>
+</div>
+<p class="font-caption text-caption text-secondary mt-space-3xs">Mean regional density across sector grids</p>
+</div>
+<div class="pt-space-sm flex items-center justify-between font-label-mono text-caption text-secondary">
+<span class="flex items-center gap-1 font-medium"><span class="material-symbols-outlined text-[14px] text-primary">sensors</span> 6 Active Stations</span>
+<span class="text-primary font-semibold">AQI 84 • Clean</span>
+</div>
+</div>
+<!-- Punjab -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between group cursor-pointer" onclick="selectTerritory('Punjab')">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-mono text-label-mono text-outline uppercase">Territory 02 / Agrarian Basin</span>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-space-3xs font-semibold">Punjab</span>
+</div>
+<span class="inline-flex items-center px-space-xs py-space-3xs rounded-full bg-secondary-fixed text-on-secondary-fixed-variant text-caption font-label-mono font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary mr-1.5"></span>Moderate
+          </span>
+</div>
+<div class="my-space-md">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-metric-display text-metric-display text-on-surface font-semibold tracking-tight">79.4</span>
+<span class="font-body-sm text-body-sm text-secondary font-medium">µg/m³ PM2.5</span>
+</div>
+<p class="font-caption text-caption text-secondary mt-space-3xs">Stubble burn downwind & industrial tracts</p>
+</div>
+<div class="pt-space-sm flex items-center justify-between font-label-mono text-caption text-secondary">
+<span class="flex items-center gap-1 font-medium"><span class="material-symbols-outlined text-[14px] text-primary">sensors</span> 8 Active Stations</span>
+<span class="text-secondary font-semibold">AQI 154 • Trans-bound</span>
+</div>
+</div>
+<!-- Haryana -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between group cursor-pointer" onclick="selectTerritory('Haryana')">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-mono text-label-mono text-outline uppercase">Territory 03 / Industrial Belt</span>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-space-3xs font-semibold">Haryana</span>
+</div>
+<span class="inline-flex items-center px-space-xs py-space-3xs rounded-full bg-secondary-fixed text-on-secondary-fixed-variant text-caption font-label-mono font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary mr-1.5"></span>Moderate
+          </span>
+</div>
+<div class="my-space-md">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-metric-display text-metric-display text-on-surface font-semibold tracking-tight">86.8</span>
+<span class="font-body-sm text-body-sm text-secondary font-medium">µg/m³ PM2.5</span>
+</div>
+<p class="font-caption text-caption text-secondary mt-space-3xs">NCR suburban periphery & brick-kiln clusters</p>
+</div>
+<div class="pt-space-sm flex items-center justify-between font-label-mono text-caption text-secondary">
+<span class="flex items-center gap-1 font-medium"><span class="material-symbols-outlined text-[14px] text-primary">sensors</span> 10 Active Stations</span>
+<span class="text-secondary font-semibold">AQI 168 • Elevated</span>
+</div>
+</div>
+<!-- Delhi NCT -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between group cursor-pointer" onclick="selectTerritory('Delhi')">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-mono text-label-mono text-outline uppercase">Territory 04 / Megacity Core</span>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-space-3xs font-semibold">Delhi NCT</span>
+</div>
+<span class="inline-flex items-center px-space-xs py-space-3xs rounded-full bg-error-container text-on-error-container text-caption font-label-mono font-medium">
+<span class="w-1.5 h-1.5 rounded-full bg-error mr-1.5"></span>Poor
+          </span>
+</div>
+<div class="my-space-md">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-metric-display text-metric-display text-on-surface font-semibold tracking-tight">114.5</span>
+<span class="font-body-sm text-body-sm text-secondary font-medium">µg/m³ PM2.5</span>
+</div>
+<p class="font-caption text-caption text-secondary mt-space-3xs">Thermal inversion combined with traffic flux</p>
+</div>
+<div class="pt-space-sm flex items-center justify-between font-label-mono text-caption text-secondary">
+<span class="flex items-center gap-1 font-medium"><span class="material-symbols-outlined text-[14px] text-primary">sensors</span> 24 Active Stations</span>
+<span class="text-error font-semibold">AQI 298 • Critical</span>
+</div>
+</div>
+</div>
+<!-- Geospatial Station Map & Detail Drawer Section -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg">
+<!-- Interactive Geospatial GIS Map Canvas (8 Cols) -->
+<div class="xl:col-span-8 bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col justify-between relative overflow-hidden">
+<!-- Map Overlay Header Controls -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm z-10 bg-surface-container-lowest/80 backdrop-blur-md p-space-xs rounded-lg">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-primary">satellite_alt</span>
+<span class="font-headline-sm text-body-lg text-on-surface font-semibold">Northern Sub-Continental GIS Mesh</span>
+<span class="font-label-mono text-caption text-secondary px-2 py-0.5 bg-surface-container-high rounded-full">48 Monitored Nodes</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="flex items-center gap-1 text-caption font-label-mono text-secondary mr-2">
+<span class="inline-block w-2.5 h-2.5 rounded-full bg-[#276a4d]" title="Good"></span>
+<span class="inline-block w-2.5 h-2.5 rounded-full bg-[#f59e0b]" title="Moderate"></span>
+<span class="inline-block w-2.5 h-2.5 rounded-full bg-[#f97316]" title="Poor"></span>
+<span class="inline-block w-2.5 h-2.5 rounded-full bg-[#ba1a1a]" title="Severe"></span>
+</div>
+<button class="px-space-xs py-1 rounded bg-surface-container text-on-surface-variant font-label-md text-caption hover:bg-surface-container-high">Full Vector</button>
+<button class="px-space-xs py-1 rounded bg-primary-container text-on-primary font-label-md text-caption">CPCB Overlay</button>
+</div>
+</div>
+<!-- Geospatial Stylized Vector & Map Canvas Visual -->
+<div class="relative w-full h-[460px] my-space-md bg-surface-container-low rounded-lg overflow-hidden flex items-center justify-center select-none">
+<!-- Static Location Backdrop Layer -->
+<div class="absolute inset-0 bg-cover bg-center opacity-30 mix-blend-luminosity filter blur-[0.5px]" data-location="New Delhi, India" style=""></div>
+<!-- Stylized GIS Vector Grid Overlay -->
+<svg class="absolute inset-0 w-full h-full text-outline-variant/30" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="gis-grid" patternunits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-dasharray="2 4" stroke-width="0.75"></path>
+</pattern>
+<!-- Radial Gradient Glows -->
+<radialgradient cx="55%" cy="65%" id="delhi-plume" r="35%">
+<stop offset="0%" stop-color="#ba1a1a" stop-opacity="0.22"></stop>
+<stop offset="60%" stop-color="#f97316" stop-opacity="0.08"></stop>
+<stop offset="100%" stop-color="#276a4d" stop-opacity="0"></stop>
+</radialgradient>
+<radialgradient cx="30%" cy="20%" id="chd-plume" r="20%">
+<stop offset="0%" stop-color="#276a4d" stop-opacity="0.18"></stop>
+<stop offset="100%" stop-color="#276a4d" stop-opacity="0"></stop>
+</radialgradient>
+</defs>
+<rect fill="url(#gis-grid)" height="100%" width="100%"></rect>
+<circle cx="55%" cy="65%" fill="url(#delhi-plume)" r="160"></circle>
+<circle cx="30%" cy="20%" fill="url(#chd-plume)" r="90"></circle>
+<!-- Isobar and Atmospheric Contour Lines -->
+<path d="M 120,50 Q 220,120 320,100 T 540,180 T 700,320" fill="none" stroke="#276a4d" stroke-dasharray="4 2" stroke-opacity="0.35" stroke-width="1.2"></path>
+<path d="M 90,140 Q 250,220 380,240 T 600,370 T 760,420" fill="none" stroke="#f59e0b" stroke-opacity="0.3" stroke-width="1.2"></path>
+<path d="M 180,260 Q 340,320 460,350 T 680,440" fill="none" stroke="#ba1a1a" stroke-opacity="0.4" stroke-width="1.5"></path>
+</svg>
+<!-- Interactive Station Cluster Markers -->
+<div class="absolute inset-0 p-8 flex flex-col justify-between pointer-events-none">
+<!-- Territory Label: Chandigarh UT -->
+<div class="absolute top-[16%] left-[26%] pointer-events-auto cursor-pointer group" onclick="loadStationData('Sector 22, Chandigarh', '30.7333° N, 76.7794° E', 48.2, 82.1, '4.2 km/h NNW', '58%')">
+<div class="relative flex items-center gap-1.5">
+<span class="animate-ping absolute -top-1 -left-1 h-5 w-5 rounded-full bg-primary opacity-60"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-primary shadow-md flex items-center justify-center text-[8px] text-on-primary font-bold">1</span>
+<span class="bg-surface-container-lowest/90 px-2 py-0.5 rounded shadow text-caption font-label-mono text-on-surface font-semibold group-hover:bg-primary group-hover:text-on-primary transition-colors">Chandigarh • 52.1</span>
+</div>
+</div>
+<!-- Territory Label: Punjab (Ludhiana / Patiala) -->
+<div class="absolute top-[28%] left-[18%] pointer-events-auto cursor-pointer group" onclick="loadStationData('Punjab Univ, Patiala', '30.3564° N, 76.4529° E', 74.0, 142.6, '6.8 km/h NW', '64%')">
+<div class="relative flex items-center gap-1.5">
+<span class="w-3.5 h-3.5 rounded-full bg-[#f59e0b] shadow-md flex items-center justify-center text-[8px] text-on-primary font-bold">2</span>
+<span class="bg-surface-container-lowest/90 px-2 py-0.5 rounded shadow text-caption font-label-mono text-on-surface font-semibold group-hover:bg-secondary group-hover:text-on-secondary transition-colors">Patiala Node • 79.4</span>
+</div>
+</div>
+<!-- Territory Label: Haryana (Rohtak / Gurugram) -->
+<div class="absolute top-[52%] left-[40%] pointer-events-auto cursor-pointer group" onclick="loadStationData('Sector 51, Gurugram', '28.4357° N, 77.0673° E', 92.4, 188.0, '3.1 km/h W', '52%')">
+<div class="relative flex items-center gap-1.5">
+<span class="w-3.5 h-3.5 rounded-full bg-[#f97316] shadow-md flex items-center justify-center text-[8px] text-on-primary font-bold">3</span>
+<span class="bg-surface-container-lowest/90 px-2 py-0.5 rounded shadow text-caption font-label-mono text-on-surface font-semibold group-hover:bg-secondary group-hover:text-on-secondary transition-colors">Gurugram Core • 86.8</span>
+</div>
+</div>
+<!-- Station Anand Vihar - Selected Indicator -->
+<div class="absolute top-[62%] left-[58%] pointer-events-auto cursor-pointer group" onclick="loadStationData('Anand Vihar, Delhi', '28.6508° N, 77.3152° E', 142.8, 289.4, '2.4 km/h Calm', '49%')">
+<div class="relative flex items-center gap-2">
+<span class="animate-ping absolute -top-1.5 -left-1.5 h-6 w-6 rounded-full bg-error opacity-75"></span>
+<span class="w-4 h-4 rounded-full bg-error shadow-lg flex items-center justify-center text-[9px] text-on-error font-bold ring-2 ring-surface-container-lowest">★</span>
+<div class="bg-surface-container-lowest px-2.5 py-1 rounded-md shadow-md text-caption font-label-mono border-l-2 border-error">
+<span class="text-error font-bold block">Selected: Anand Vihar</span>
+<span class="text-secondary text-[10px]">142.8 µg/m³ • Severe</span>
+</div>
+</div>
+</div>
+<!-- Delhi Secondary: Jahangirpuri -->
+<div class="absolute top-[50%] left-[52%] pointer-events-auto cursor-pointer opacity-80 hover:opacity-100" onclick="loadStationData('Jahangirpuri, Delhi', '28.7325° N, 77.1706° E', 128.0, 240.2, '1.8 km/h NW', '51%')">
+<span class="w-3 h-3 rounded-full bg-error shadow inline-block"></span>
+</div>
+<!-- Delhi Tertiary: RK Puram -->
+<div class="absolute top-[70%] left-[52%] pointer-events-auto cursor-pointer opacity-80 hover:opacity-100" onclick="loadStationData('RK Puram, Delhi', '28.5638° N, 77.1867° E', 106.3, 195.0, '2.1 km/h WNW', '47%')">
+<span class="w-3 h-3 rounded-full bg-[#f97316] shadow inline-block"></span>
+</div>
+</div>
+<!-- Bottom Compass & Scale Indicator -->
+<div class="absolute bottom-3 left-4 flex items-center gap-3 bg-surface-container-lowest/85 backdrop-blur-sm px-2.5 py-1 rounded text-caption font-label-mono text-secondary">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">explore</span> N 01°22' W</span>
+<span>Scale: 1:250,000</span>
+<span class="text-primary font-semibold">CPCB Synced 2025</span>
+</div>
+</div>
+<!-- Footnote note sourced from official metadata -->
+<div class="flex items-center justify-between text-caption font-caption text-secondary pt-space-xs">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-primary">verified_user</span>
+<span>Station coordinates sourced from official CPCB regulatory metadata. Dynamic spatial calibration active.</span>
+</span>
+<span class="font-label-mono text-[11px] text-outline">GeoDatum: WGS-84 Projected</span>
+</div>
+</div>
+<!-- Selected Station Detail Drawer (4 Cols) -->
+<div class="xl:col-span-4 bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col justify-between" id="station-detail-drawer">
+<div>
+<!-- Drawer Header -->
+<div class="flex items-start justify-between pb-space-sm">
+<div class="flex flex-col">
+<span class="font-label-mono text-label-mono text-outline uppercase tracking-wider">CPCB Reg ID: DL-ND-008</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold mt-1" id="station-name">Anand Vihar Station</h3>
+<p class="font-label-mono text-caption text-secondary mt-0.5" id="station-coords">Verified: 28.6508° N, 77.3152° E</p>
+</div>
+<span class="px-space-xs py-1 rounded-full bg-error-container text-on-error-container font-label-mono text-caption font-semibold" id="station-status-pill">
+              Critical Peak
+            </span>
+</div>
+<!-- Quick Station Status Banner -->
+<div class="bg-surface-container-low p-space-md rounded-lg my-space-md flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-caption text-caption text-secondary">Telemetry Reliability</span>
+<span class="font-headline-sm text-body-lg text-primary font-bold">99.82% Up-time</span>
+</div>
+<div class="h-8 w-px bg-outline-variant"></div>
+<div class="flex flex-col">
+<span class="font-caption text-caption text-secondary">Sensor Tier</span>
+<span class="font-label-mono text-body-sm text-on-surface font-medium">BAM-1020 Beta Aten.</span>
+</div>
+</div>
+<!-- Instantaneous Primary Readings -->
+<div class="grid grid-cols-2 gap-space-md mb-space-md">
+<div class="p-space-md bg-surface-container-lowest rounded-lg shadow-sm">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-mono text-caption">PM2.5 INSTANT</span>
+<span class="material-symbols-outlined text-[14px] text-error">trending_up</span>
+</div>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-metric-display-sm text-metric-display-sm text-on-surface font-semibold" id="station-pm25">142.8</span>
+<span class="font-caption text-caption text-secondary">µg/m³</span>
+</div>
+<span class="font-caption text-caption text-error font-medium">+18.4% vs state baseline</span>
+</div>
+<div class="p-space-md bg-surface-container-lowest rounded-lg shadow-sm">
+<div class="flex items-center justify-between text-secondary">
+<span class="font-label-mono text-caption">PM10 INSTANT</span>
+<span class="material-symbols-outlined text-[14px] text-[#f97316]">trending_up</span>
+</div>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-metric-display-sm text-metric-display-sm text-on-surface font-semibold" id="station-pm10">289.4</span>
+<span class="font-caption text-caption text-secondary">µg/m³</span>
+</div>
+<span class="font-caption text-caption text-[#f97316] font-medium">+22.1% coarse fraction</span>
+</div>
+</div>
+<!-- Atmospheric Vector Attributes -->
+<div class="flex flex-col gap-space-sm bg-surface-container-low/60 p-space-md rounded-lg">
+<span class="font-label-mono text-caption text-outline uppercase font-semibold">Micro-Meteorological Vectors</span>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-secondary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">air</span> Active Wind Vector
+              </span>
+<span class="font-label-mono font-medium text-on-surface" id="station-wind">2.4 km/h Calm (112° ESE)</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-secondary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">humidity_percentage</span> Relative Humidity
+              </span>
+<span class="font-label-mono font-medium text-on-surface" id="station-humidity">49% Non-Condensing</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-secondary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">thermostat</span> Ambient Surface Temp
+              </span>
+<span class="font-label-mono font-medium text-on-surface">21.8 °C</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-secondary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">vertical_align_top</span> Boundary Layer Height
+              </span>
+<span class="font-label-mono font-medium text-on-surface">420 m (Inversion Trap)</span>
+</div>
+</div>
+</div>
+<!-- Action / Verification Button -->
+<div class="pt-space-md flex flex-col gap-space-xs">
+<button class="w-full h-9 bg-primary text-on-primary rounded-lg text-label-md font-label-md font-medium hover:bg-primary-container transition-colors flex items-center justify-center gap-space-xs shadow-sm">
+<span class="material-symbols-outlined text-[16px]">download_for_offline</span>
+<span>Extract Raw Telemetry Log</span>
+</button>
+<div class="text-center font-caption text-[11px] text-outline">CPCB Validated Node • Auto-sync every 15 mins</div>
+</div>
+</div>
+</div>
+<!-- Comparative Analytical Charts & Visualizations -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Chart 1: State vs State Pollutant Breakdown (7 Cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs pb-space-md">
+<div>
+<span class="font-label-mono text-label-mono text-outline uppercase tracking-wider">Multi-Chemical Profiling</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Territory Pollutant Breakdown</h3>
+</div>
+<!-- Chemical Selector Filter -->
+<div class="flex items-center gap-1 bg-surface-container-low p-1 rounded-lg">
+<button class="px-2.5 py-1 text-caption font-label-mono rounded bg-surface-container-lowest shadow-sm text-primary font-bold">Concentrations</button>
+<button class="px-2.5 py-1 text-caption font-label-mono rounded text-secondary hover:text-on-surface">NAAQS Multiplier</button>
+</div>
+</div>
+<!-- Clean Inline SVG Comparative Bar Telemetry -->
+<div class="h-64 w-full flex flex-col justify-between py-space-sm">
+<!-- Chandigarh Row -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-body-sm font-label-mono">
+<span class="font-semibold text-on-surface w-28">Chandigarh UT</span>
+<div class="flex items-center gap-3 text-caption text-secondary">
+<span>PM2.5: <strong class="text-on-surface">52.1</strong></span>
+<span>PM10: <strong class="text-on-surface">88.4</strong></span>
+<span>NO2: <strong class="text-on-surface">22.0</strong></span>
+<span>SO2: <strong class="text-on-surface">9.4</strong></span>
+</div>
+</div>
+<div class="w-full h-3 bg-surface-container-high rounded-full overflow-hidden flex">
+<div class="h-full bg-primary" style="width: 32%" title="PM2.5"></div>
+<div class="h-full bg-[#adf1cc]" style="width: 25%" title="PM10"></div>
+<div class="h-full bg-[#58605c]" style="width: 15%" title="NO2"></div>
+<div class="h-full bg-[#bfc9c1]" style="width: 8%" title="SO2"></div>
+</div>
+</div>
+<!-- Punjab Row -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-body-sm font-label-mono">
+<span class="font-semibold text-on-surface w-28">Punjab</span>
+<div class="flex items-center gap-3 text-caption text-secondary">
+<span>PM2.5: <strong class="text-on-surface">79.4</strong></span>
+<span>PM10: <strong class="text-on-surface">144.2</strong></span>
+<span>NO2: <strong class="text-on-surface">34.6</strong></span>
+<span>SO2: <strong class="text-on-surface">14.1</strong></span>
+</div>
+</div>
+<div class="w-full h-3 bg-surface-container-high rounded-full overflow-hidden flex">
+<div class="h-full bg-primary" style="width: 48%" title="PM2.5"></div>
+<div class="h-full bg-[#adf1cc]" style="width: 30%" title="PM10"></div>
+<div class="h-full bg-[#58605c]" style="width: 12%" title="NO2"></div>
+<div class="h-full bg-[#bfc9c1]" style="width: 6%" title="SO2"></div>
+</div>
+</div>
+<!-- Haryana Row -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-body-sm font-label-mono">
+<span class="font-semibold text-on-surface w-28">Haryana</span>
+<div class="flex items-center gap-3 text-caption text-secondary">
+<span>PM2.5: <strong class="text-on-surface">86.8</strong></span>
+<span>PM10: <strong class="text-on-surface">168.0</strong></span>
+<span>NO2: <strong class="text-on-surface">42.2</strong></span>
+<span>SO2: <strong class="text-on-surface">19.5</strong></span>
+</div>
+</div>
+<div class="w-full h-3 bg-surface-container-high rounded-full overflow-hidden flex">
+<div class="h-full bg-primary" style="width: 55%" title="PM2.5"></div>
+<div class="h-full bg-[#adf1cc]" style="width: 28%" title="PM10"></div>
+<div class="h-full bg-[#58605c]" style="width: 14%" title="NO2"></div>
+<div class="h-full bg-[#bfc9c1]" style="width: 7%" title="SO2"></div>
+</div>
+</div>
+<!-- Delhi NCT Row -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between text-body-sm font-label-mono">
+<span class="font-semibold text-on-surface w-28">Delhi NCT</span>
+<div class="flex items-center gap-3 text-caption text-secondary">
+<span>PM2.5: <strong class="text-on-surface">114.5</strong></span>
+<span>PM10: <strong class="text-on-surface">235.1</strong></span>
+<span>NO2: <strong class="text-on-surface">68.4</strong></span>
+<span>SO2: <strong class="text-on-surface">24.2</strong></span>
+</div>
+</div>
+<div class="w-full h-3 bg-surface-container-high rounded-full overflow-hidden flex">
+<div class="h-full bg-error" style="width: 68%" title="PM2.5"></div>
+<div class="h-full bg-[#f97316]" style="width: 22%" title="PM10"></div>
+<div class="h-full bg-[#58605c]" style="width: 8%" title="NO2"></div>
+<div class="h-full bg-[#bfc9c1]" style="width: 4%" title="SO2"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Legend -->
+<div class="pt-space-md flex flex-wrap items-center gap-space-lg font-caption text-caption text-secondary">
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded bg-primary"></span> PM2.5 Fine Particles</span>
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded bg-[#adf1cc]"></span> PM10 Coarse</span>
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded bg-[#58605c]"></span> NO₂ Combustion</span>
+<span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded bg-[#bfc9c1]"></span> SO₂ Thermal Plants</span>
+<span class="ml-auto font-label-mono text-outline">Units: µg/m³ 24h Average</span>
+</div>
+</div>
+<!-- Chart 2: Urban Density vs Pollution Gradient Analysis (5 Cols) -->
+<div class="lg:col-span-5 bg-surface-container-lowest p-space-xl rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-sm">
+<div>
+<span class="font-label-mono text-label-mono text-outline uppercase tracking-wider">Spatial Correlation</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Density vs Pollution Gradient</h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-primary-fixed/20 text-on-primary-fixed-variant font-label-mono text-caption font-semibold">r = 0.84 Correlated</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary">Non-linear exponential curve demonstrating pollutant saturation as human density exceeds 8,000 hab/km².</p>
+<!-- Scatter / Gradient Curve Visualization -->
+<div class="relative w-full h-56 mt-space-md bg-surface-container-low rounded-lg p-space-sm overflow-hidden flex items-end">
+<!-- Curve SVG -->
+<svg class="absolute inset-0 w-full h-full p-2" fill="none" viewbox="0 0 300 180">
+<!-- Grid dashes -->
+<line stroke="#c0c9c3" stroke-dasharray="2 3" stroke-width="0.8" x1="20" x2="280" y1="150" y2="150"></line>
+<line stroke="#c0c9c3" stroke-dasharray="2 3" stroke-width="0.8" x1="20" x2="280" y1="100" y2="100"></line>
+<line stroke="#c0c9c3" stroke-dasharray="2 3" stroke-width="0.8" x1="20" x2="280" y1="50" y2="50"></line>
+<!-- Gradient Curve Area -->
+<path d="M 30,145 Q 110,135 180,95 T 270,30 L 270,150 L 30,150 Z" fill="rgba(40, 107, 78, 0.08)"></path>
+<!-- Correlation Line -->
+<path d="M 30,145 Q 110,135 180,95 T 270,30" stroke="#286b4e" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Scatter points for major hubs -->
+<!-- Chandigarh: Low density (3,200/km2), low PM2.5 -->
+<circle cx="55" cy="140" fill="#286b4e" r="4.5"></circle>
+<text fill="#181d19" font-family="Inter" font-size="8" font-weight="500" x="63" y="138">Chandigarh (3.2k hab)</text>
+<!-- Patiala: Agrarian medium -->
+<circle cx="120" cy="122" fill="#58605c" r="4.5"></circle>
+<text fill="#181d19" font-family="Inter" font-size="8" x="128" y="120">Punjab Agr. (4.5k)</text>
+<!-- Gurugram / Faridabad: Urban medium-high -->
+<circle cx="190" cy="88" fill="#58605c" r="5"></circle>
+<text fill="#181d19" font-family="Inter" font-size="8" x="175" y="80">Haryana Ind. (9.1k)</text>
+<!-- Delhi NCT: Extreme density (11,300/km2) -->
+<circle cx="265" cy="35" fill="#ba1a1a" r="6"></circle>
+<text fill="#ba1a1a" font-family="Inter" font-size="8" font-weight="bold" x="210" y="30">Delhi NCT (11.3k)</text>
+</svg>
+</div>
+</div>
+<div class="pt-space-sm flex items-center justify-between font-caption text-caption text-secondary">
+<span>X-Axis: Hab. Density / km²</span>
+<span>Y-Axis: Mean PM2.5 Exposure Level</span>
+</div>
+</div>
+</div>
+<!-- Station Explorer Filter & List Table -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col gap-space-md">
+<!-- Table Filters & Search Controls -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Continuous Telemetry Nodes Registry</h3>
+<p class="font-body-sm text-body-sm text-secondary">Real-time status of 48 Continuous Ambient Air Quality Monitoring Stations (CAAQMS).</p>
+</div>
+<!-- Filter Switch Buttons -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<div class="flex items-center bg-surface-container-low px-space-xs py-1 rounded-lg">
+<button class="tab-btn active px-3 py-1 text-label-md font-label-md rounded bg-surface-container-lowest shadow-sm text-primary font-bold" onclick="filterTable('all')">All (48)</button>
+<button class="tab-btn px-3 py-1 text-label-md font-label-md rounded text-secondary hover:text-on-surface" onclick="filterTable('Chandigarh')">Chandigarh (6)</button>
+<button class="tab-btn px-3 py-1 text-label-md font-label-md rounded text-secondary hover:text-on-surface" onclick="filterTable('Punjab')">Punjab (8)</button>
+<button class="tab-btn px-3 py-1 text-label-md font-label-md rounded text-secondary hover:text-on-surface" onclick="filterTable('Haryana')">Haryana (10)</button>
+<button class="tab-btn px-3 py-1 text-label-md font-label-md rounded text-secondary hover:text-on-surface" onclick="filterTable('Delhi')">Delhi NCT (24)</button>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-2.5 top-2 text-[16px] text-outline">search</span>
+<input class="h-8 pl-8 pr-3 text-body-sm bg-surface-container-low rounded-lg focus:outline-none focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary text-on-surface placeholder-outline" id="station-search" onkeyup="searchStations()" placeholder="Search station name or code..." type="text"/>
+</div>
+</div>
+</div>
+<!-- High Density Clean Telemetry Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-secondary font-label-mono text-label-mono tracking-wider">
+<th class="py-2.5 px-3 font-medium rounded-l-lg">Node Identifier</th>
+<th class="py-2.5 px-3 font-medium">Territory</th>
+<th class="py-2.5 px-3 font-medium">Verified CPCB Coords</th>
+<th class="py-2.5 px-3 font-medium text-right">PM2.5 (µg/m³)</th>
+<th class="py-2.5 px-3 font-medium text-right">PM10 (µg/m³)</th>
+<th class="py-2.5 px-3 font-medium text-right">AQI Index</th>
+<th class="py-2.5 px-3 font-medium">Severity Band</th>
+<th class="py-2.5 px-3 font-medium rounded-r-lg text-right">Telemetry Link</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm divide-y-0" id="stations-table-body">
+<!-- Row: Anand Vihar -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group cursor-pointer" onclick="loadStationData('Anand Vihar, Delhi', '28.6508° N, 77.3152° E', 142.8, 289.4, '2.4 km/h Calm', '49%')">
+<td class="py-3 px-3 font-semibold text-on-surface flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span>Anand Vihar (DL-008)</span>
+</td>
+<td class="py-3 px-3 text-secondary font-label-mono">Delhi NCT</td>
+<td class="py-3 px-3 font-label-mono text-caption text-secondary">28.6508° N, 77.3152° E</td>
+<td class="py-3 px-3 text-right font-label-mono font-bold text-error">142.8</td>
+<td class="py-3 px-3 text-right font-label-mono font-semibold text-on-surface">289.4</td>
+<td class="py-3 px-3 text-right font-label-mono font-bold text-error">324</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-error-container text-on-error-container text-caption font-label-mono font-medium">
+                  Severe Peak
+                </span>
+</td>
+<td class="py-3 px-3 text-right font-label-mono text-primary font-medium text-caption">100% Operational • BAM</td>
+</tr>
+<!-- Row: Sector 22, Chandigarh -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group cursor-pointer" onclick="loadStationData('Sector 22, Chandigarh', '30.7333° N, 76.7794° E', 48.2, 82.1, '4.2 km/h NNW', '58%')">
+<td class="py-3 px-3 font-semibold text-on-surface flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>Sector 22 (CH-002)</span>
+</td>
+<td class="py-3 px-3 text-secondary font-label-mono">Chandigarh UT</td>
+<td class="py-3 px-3 font-label-mono text-caption text-secondary">30.7333° N, 76.7794° E</td>
+<td class="py-3 px-3 text-right font-label-mono font-bold text-primary">48.2</td>
+<td class="py-3 px-3 text-right font-label-mono font-semibold text-on-surface">82.1</td>
+<td class="py-3 px-3 text-right font-label-mono font-bold text-primary">78</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-primary-fixed/30 text-on-primary-fixed-variant text-caption font-label-mono font-medium">
+                  Satisfactory
+                </span>
+</td>
+<td class="py-3 px-3 text-right font-label-mono text-primary font-medium text-caption">100% Operational • TEOM</td>
+</tr>
+<!-- Row: Sector 51, Gurugram -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group cursor-pointer" onclick="loadStationData('Sector 51, Gurugram', '28.4357° N, 77.0673° E', 92.4, 188.0, '3.1 km/h W', '52%')">
+<td class="py-3 px-3 font-semibold text-on-surface flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-[#f97316]"></span>
+<span>Sector 51 (HR-012)</span>
+</td>
+<td class="py-3 px-3 text-secondary font-label-mono">Haryana</td>
+<td class="py-3 px-3 font-label-mono text-caption text-secondary">28.4357° N, 77.0673° E</td>
+<td class="py-3 px-3 text-right font-label-mono font-bold text-[#f97316]">92.4</td>
+<td class="py-3 px-3 text-right font-label-mono font-semibold text-on-surface">188.0</td>
+<td class="py-3 px-3 text-right font-label-mono font-bold text-[#f97316]">196</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant text-caption font-label-mono font-medium">
+                  Moderate-High
+                </span>
+</td>
+<td class="py-3 px-3 text-right font-label-mono text-primary font-medium text-caption">99.4% Operational • BAM</td>
+</tr>
+<!-- Row: Punjabi Univ, Patiala -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group cursor-pointer" onclick="loadStationData('Punjab Univ, Patiala', '30.3564° N, 76.4529° E', 74.0, 142.6, '6.8 km/h NW', '64%')">
+<td class="py-3 px-3 font-semibold text-on-surface flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-[#f59e0b]"></span>
+<span>Punjabi Univ (PB-005)</span>
+</td>
+<td class="py-3 px-3 text-secondary font-label-mono">Punjab</td>
+<td class="py-3 px-3 font-label-mono text-caption text-secondary">30.3564° N, 76.4529° E</td>
+<td class="py-3 px-3 text-right font-label-mono font-bold text-on-surface">74.0</td>
+<td class="py-3 px-3 text-right font-label-mono font-semibold text-on-surface">142.6</td>
+<td class="py-3 px-3 text-right font-label-mono font-bold text-secondary">152</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant text-caption font-label-mono font-medium">
+                  Moderate
+                </span>
+</td>
+<td class="py-3 px-3 text-right font-label-mono text-primary font-medium text-caption">98.9% Operational • Optical</td>
+</tr>
+<!-- Row: Jahangirpuri, Delhi -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group cursor-pointer" onclick="loadStationData('Jahangirpuri, Delhi', '28.7325° N, 77.1706° E', 128.0, 240.2, '1.8 km/h NW', '51%')">
+<td class="py-3 px-3 font-semibold text-on-surface flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span>Jahangirpuri (DL-019)</span>
+</td>
+<td class="py-3 px-3 text-secondary font-label-mono">Delhi NCT</td>
+<td class="py-3 px-3 font-label-mono text-caption text-secondary">28.7325° N, 77.1706° E</td>
+<td class="py-3 px-3 text-right font-label-mono font-bold text-error">128.0</td>
+<td class="py-3 px-3 text-right font-label-mono font-semibold text-on-surface">240.2</td>
+<td class="py-3 px-3 text-right font-label-mono font-bold text-error">308</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-error-container text-on-error-container text-caption font-label-mono font-medium">
+                  Very Poor
+                </span>
+</td>
+<td class="py-3 px-3 text-right font-label-mono text-primary font-medium text-caption">100% Operational • BAM</td>
+</tr>
+<!-- Row: Sector 53, Chandigarh -->
+<tr class="hover:bg-surface-container-low/70 transition-colors group cursor-pointer" onclick="loadStationData('Sector 53, Chandigarh', '30.7188° N, 76.7321° E', 54.1, 91.0, '3.8 km/h N', '56%')">
+<td class="py-3 px-3 font-semibold text-on-surface flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>Sector 53 (CH-004)</span>
+</td>
+<td class="py-3 px-3 text-secondary font-label-mono">Chandigarh UT</td>
+<td class="py-3 px-3 font-label-mono text-caption text-secondary">30.7188° N, 76.7321° E</td>
+<td class="py-3 px-3 text-right font-label-mono font-bold text-primary">54.1</td>
+<td class="py-3 px-3 text-right font-label-mono font-semibold text-on-surface">91.0</td>
+<td class="py-3 px-3 text-right font-label-mono font-bold text-primary">89</td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-primary-fixed/30 text-on-primary-fixed-variant text-caption font-label-mono font-medium">
+                  Satisfactory
+                </span>
+</td>
+<td class="py-3 px-3 text-right font-label-mono text-primary font-medium text-caption">99.1% Operational • BAM</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Bottom Info -->
+<div class="flex items-center justify-between pt-space-xs text-caption font-caption text-secondary">
+<span>Showing 6 of 48 calibrated stations • Filter active</span>
+<div class="flex items-center gap-2">
+<button class="px-2 py-1 rounded bg-surface-container text-on-surface font-label-mono text-caption hover:bg-surface-container-high transition-colors">Previous</button>
+<span class="font-label-mono text-caption">Page 1 of 8</span>
+<button class="px-2 py-1 rounded bg-surface-container text-on-surface font-label-mono text-caption hover:bg-surface-container-high transition-colors">Next</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function loadStationData(name, coords, pm25, pm10, wind, humidity) {
+    document.getElementById('station-name').innerText = name + ' Station';
+    document.getElementById('station-coords').innerText = 'Verified: ' + coords;
+    document.getElementById('station-pm25').innerText = pm25.toFixed(1);
+    document.getElementById('station-pm10').innerText = pm10.toFixed(1);
+    document.getElementById('station-wind').innerText = wind;
+    document.getElementById('station-humidity').innerText = humidity + ' Non-Condensing';
+
+    var statusPill = document.getElementById('station-status-pill');
+    if (pm25 > 100) {
+      statusPill.className = "px-space-xs py-1 rounded-full bg-error-container text-on-error-container font-label-mono text-caption font-semibold";
+      statusPill.innerText = "Critical Peak";
+    } else if (pm25 > 60) {
+      statusPill.className = "px-space-xs py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-mono text-caption font-semibold";
+      statusPill.innerText = "Moderate Band";
+    } else {
+      statusPill.className = "px-space-xs py-1 rounded-full bg-primary-fixed/30 text-on-primary-fixed-variant font-label-mono text-caption font-semibold";
+      statusPill.innerText = "Satisfactory";
+    }
+
+    var drawer = document.getElementById('station-detail-drawer');
+    drawer.classList.add('ring-2', 'ring-primary-container');
+    setTimeout(() => {
+      drawer.classList.remove('ring-2', 'ring-primary-container');
+    }, 600);
+  }
+
+  function selectTerritory(territory) {
+    filterTable(territory);
+    const searchInput = document.getElementById('station-search');
+    searchInput.value = territory;
+    searchStations();
+  }
+
+  function filterTable(region) {
+    const buttons = document.querySelectorAll('.tab-btn');
+    buttons.forEach(btn => {
+      if (btn.innerText.toLowerCase().includes(region.toLowerCase()) || (region === 'all' && btn.innerText.includes('All'))) {
+        btn.className = "tab-btn active px-3 py-1 text-label-md font-label-md rounded bg-surface-container-lowest shadow-sm text-primary font-bold";
+      } else {
+        btn.className = "tab-btn px-3 py-1 text-label-md font-label-md rounded text-secondary hover:text-on-surface";
+      }
+    });
+
+    const rows = document.querySelectorAll('#stations-table-body tr');
+    rows.forEach(row => {
+      if (region === 'all') {
+        row.style.display = '';
+      } else {
+        const text = row.children[1].innerText;
+        if (text.toLowerCase().includes(region.toLowerCase())) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      }
+    });
+  }
+
+  function searchStations() {
+    const filter = document.getElementById('station-search').value.toLowerCase();
+    const rows = document.querySelectorAll('#stations-table-body tr');
+    rows.forEach(row => {
+      const match = row.innerText.toLowerCase().includes(filter);
+      row.style.display = match ? '' : 'none';
+    });
+  }
+
+  document.getElementById('toggle-calibration').addEventListener('click', function() {
+    const btn = this;
+    const originalText = btn.innerHTML;
+    btn.innerHTML = '<span class="material-symbols-outlined text-[16px] animate-spin">refresh</span><span>Calibrating...</span>';
+    setTimeout(() => {
+      btn.innerHTML = '<span class="material-symbols-outlined text-[16px]">check_circle</span><span>Baseline Synced</span>';
+      setTimeout(() => {
+        btn.innerHTML = originalText;
+      }, 2000);
+    }, 1200);
+  });
+</script></main></div></body></html>

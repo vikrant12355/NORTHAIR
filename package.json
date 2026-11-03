@@ -1,0 +1,17 @@
+{
+  "name": "northair-intelligence-root",
+  "version": "1.0.0",
+  "description": "NorthAir Intelligence — Full Stack Environmental Analytics Platform",
+  "private": true,
+  "scripts": {
+    "install:all": "npm --prefix backend install && npm --prefix frontend install",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "build:frontend": "npm --prefix frontend run build",
+    "build:backend": "npm --prefix backend run build",
+    "build": "npm run build:frontend && npm run build:backend",
+    "start": "npm --prefix backend start",
+    "test:backend": "npm --prefix backend test"
+  }
+}
+

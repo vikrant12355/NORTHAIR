@@ -1,0 +1,34 @@
+Description,Variable_1,Variable_2,Subset,Sample_Size_N,Pearson_R,Pearson_P_Value,Spearman_Rho,Spearman_P_Value,Interpretation
+Temperature vs PM2.5,AT (°C),PM2.5 (µg/m³),Overall Network,115569,-0.3786,0.0,-0.4279,0.0,Moderate Negative
+Temperature vs PM2.5,AT (°C),PM2.5 (µg/m³),Season: Winter,34215,-0.1309,1.2285813043127378e-130,-0.1335,9.197509453314737e-136,Statistical correlation within seasonal cohort
+Temperature vs PM2.5,AT (°C),PM2.5 (µg/m³),Season: Pre-Monsoon,26715,-0.0795,9.444957197431042e-39,-0.0271,9.432127165061266e-06,Statistical correlation within seasonal cohort
+Temperature vs PM2.5,AT (°C),PM2.5 (µg/m³),Season: Monsoon,31799,0.2571,0.0,0.3084,0.0,Statistical correlation within seasonal cohort
+Temperature vs PM2.5,AT (°C),PM2.5 (µg/m³),Season: Post-Monsoon,22840,-0.1689,9.232444692357578e-146,-0.1571,3.5816214519275536e-126,Statistical correlation within seasonal cohort
+Humidity vs PM2.5,RH (%),PM2.5 (µg/m³),Overall Network,173177,0.0211,1.6545160252527436e-18,-0.0894,2.8649157550227646e-304,Weak/Negligible
+Humidity vs PM2.5,RH (%),PM2.5 (µg/m³),Season: Winter,50782,0.1203,4.6542520125191067e-163,0.0532,4.1271232077262305e-33,Statistical correlation within seasonal cohort
+Humidity vs PM2.5,RH (%),PM2.5 (µg/m³),Season: Pre-Monsoon,37901,0.0274,9.92637996334599e-08,0.0008,0.8758259941879164,Statistical correlation within seasonal cohort
+Humidity vs PM2.5,RH (%),PM2.5 (µg/m³),Season: Monsoon,46911,-0.2083,0.0,-0.2938,0.0,Statistical correlation within seasonal cohort
+Humidity vs PM2.5,RH (%),PM2.5 (µg/m³),Season: Post-Monsoon,37583,-0.0279,6.137767806699567e-08,-0.0954,1.092234860041325e-76,Statistical correlation within seasonal cohort
+Wind Speed vs PM2.5,WS (m/s),PM2.5 (µg/m³),Overall Network,189541,-0.0732,3.4059258406398903e-223,-0.0831,8.780519396112112e-288,Weak/Negligible
+Wind Speed vs PM2.5,WS (m/s),PM2.5 (µg/m³),Season: Winter,60318,-0.087,1.3470566026326997e-101,-0.128,8.221110948419409e-219,Statistical correlation within seasonal cohort
+Wind Speed vs PM2.5,WS (m/s),PM2.5 (µg/m³),Season: Pre-Monsoon,39216,-0.0646,1.3978884158370841e-37,-0.067,2.8676188026530983e-40,Statistical correlation within seasonal cohort
+Wind Speed vs PM2.5,WS (m/s),PM2.5 (µg/m³),Season: Monsoon,45723,-0.0178,0.00013921023295246517,0.0163,0.00048062628630043226,Statistical correlation within seasonal cohort
+Wind Speed vs PM2.5,WS (m/s),PM2.5 (µg/m³),Season: Post-Monsoon,44284,-0.0422,6.671472599758652e-19,-0.0158,0.000897762626836014,Statistical correlation within seasonal cohort
+Rainfall vs PM2.5,RF (mm),PM2.5 (µg/m³),Overall Network,170032,-0.0247,2.7627024795729134e-24,-0.0902,2.389749365359163e-304,Weak/Negligible
+Rainfall vs PM2.5,RF (mm),PM2.5 (µg/m³),Season: Winter,53317,-0.0053,0.22455761362795146,-0.0297,6.561662773644292e-12,Statistical correlation within seasonal cohort
+Rainfall vs PM2.5,RF (mm),PM2.5 (µg/m³),Season: Pre-Monsoon,32529,-0.0036,0.5186026936970503,-0.0287,2.302960996288126e-07,Statistical correlation within seasonal cohort
+Rainfall vs PM2.5,RF (mm),PM2.5 (µg/m³),Season: Monsoon,37955,-0.0355,4.774359123972126e-12,-0.093,1.0390974810985611e-73,Statistical correlation within seasonal cohort
+Rainfall vs PM2.5,RF (mm),PM2.5 (µg/m³),Season: Post-Monsoon,46231,-0.0086,0.06359234984632678,-0.0539,4.803773993121363e-31,Statistical correlation within seasonal cohort
+Temperature vs Ozone,AT (°C),Ozone (µg/m³),Overall Network,114282,0.3889,0.0,0.4245,0.0,Moderate Positive
+Temperature vs Ozone,AT (°C),Ozone (µg/m³),Season: Winter,33777,0.4311,0.0,0.4175,0.0,Statistical correlation within seasonal cohort
+Temperature vs Ozone,AT (°C),Ozone (µg/m³),Season: Pre-Monsoon,26425,0.4708,0.0,0.4997,0.0,Statistical correlation within seasonal cohort
+Temperature vs Ozone,AT (°C),Ozone (µg/m³),Season: Monsoon,30964,0.406,0.0,0.4287,0.0,Statistical correlation within seasonal cohort
+Temperature vs Ozone,AT (°C),Ozone (µg/m³),Season: Post-Monsoon,23116,0.382,0.0,0.4208,0.0,Statistical correlation within seasonal cohort
+Wind Speed vs PM10,WS (m/s),PM10 (µg/m³),Overall Network,185595,-0.0343,2.2258088973032702e-49,-0.0152,6.220534070336732e-11,Weak/Negligible
+Wind Speed vs PM10,WS (m/s),PM10 (µg/m³),Season: Winter,58281,-0.0544,1.9903100880350596e-39,-0.0633,8.397174691310605e-53,Statistical correlation within seasonal cohort
+Wind Speed vs PM10,WS (m/s),PM10 (µg/m³),Season: Pre-Monsoon,38350,0.0402,3.1565681829347585e-15,0.0727,4.174314481111162e-46,Statistical correlation within seasonal cohort
+Wind Speed vs PM10,WS (m/s),PM10 (µg/m³),Season: Monsoon,45698,0.0788,6.353764765934595e-64,0.1124,2.0969876959078658e-128,Statistical correlation within seasonal cohort
+Wind Speed vs PM10,WS (m/s),PM10 (µg/m³),Season: Post-Monsoon,43266,-0.0524,1.0860214611648053e-27,-0.0298,5.351270254090714e-10,Statistical correlation within seasonal cohort
+VWS vs PM2.5,VWS (m/s),PM2.5 (µg/m³),Overall Network,6251,-0.079,4.0681292965286956e-10,-0.0169,0.1812845725886235,Weak/Negligible
+VWS vs PM2.5,VWS (m/s),PM2.5 (µg/m³),Season: Winter,3668,-0.1333,5.1570818931114e-16,-0.1175,9.547577388435026e-13,Statistical correlation within seasonal cohort
+VWS vs PM2.5,VWS (m/s),PM2.5 (µg/m³),Season: Post-Monsoon,2583,0.0884,6.82476903854251e-06,0.1484,3.4094488473844874e-14,Statistical correlation within seasonal cohort

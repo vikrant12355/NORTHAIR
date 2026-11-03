@@ -1,0 +1,49 @@
+Station ID,State,City,Station_Name,Recorded_Hours,Expected_Hours,Missing_Hours,Temporal_Coverage_Pct
+site_1420,Delhi,Delhi,"Ashok Vihar, Delhi - DPCC",8760,8760,0,100.0
+site_1422,Delhi,Delhi,"Dwarka-Sector 8, Delhi - DPCC ",8760,8760,0,100.0
+site_1426,Delhi,Delhi,"Narela, Delhi - DPCC",8760,8760,0,100.0
+site_1429,Delhi,Delhi,"Nehru Nagar, Delhi - DPCC",8760,8760,0,100.0
+site_1431,Delhi,Delhi,"Patparganj, Delhi - DPCC",8760,8760,0,100.0
+site_1434,Delhi,Delhi,"Wazirpur, Delhi - DPCC",8760,8760,0,100.0
+site_1437,Punjab,Patiala,"Model Town, Patiala - PPCB",8760,8760,0,100.0
+site_1438,Punjab,Jalandhar,"Civil Line, Jalandhar - PPCB",8760,8760,0,100.0
+site_1450,Punjab,Khanna,"Kalal Majra, Khanna - PPCB",8760,8760,0,100.0
+site_146,Haryana,Gurugram,"Vikas Sadan, Gurugram - HSPCB",8760,8760,0,100.0
+site_147,Haryana,Rohtak,"MD University, Rohtak - HSPCB",8760,8760,0,100.0
+site_1538,Punjab,Rupnagar,"Ratanpura, Rupnagar - Ambuja Cements",8760,8760,0,100.0
+site_1549,Punjab,Bathinda,"Hardev Nagar, Bathinda - PPCB",8760,8760,0,100.0
+site_255,Punjab,Mandi Gobindgarh,"RIMT University, Mandi Gobindgarh - PPCB",8760,8760,0,100.0
+site_5025,Haryana,Gurugram,"NISE Gwal Pahari, Gurugram - IMD",8760,8760,0,100.0
+site_263,Haryana,Faridabad,"Sector- 16A, Faridabad - HSPCB",8760,8760,0,100.0
+site_5340,Haryana,Faridabad,"New Industrial Town, Faridabad - HSPCB",8760,8760,0,100.0
+site_5055,Haryana,Mandikhera,"General Hospital, Mandikhera(Nuh) - HSPCB",8760,8760,0,100.0
+site_5039,Haryana,Manesar,"Sector-2 IMT, Manesar - HSPCB",8760,8760,0,100.0
+site_5041,Haryana,Sonipat,"Murthal, Sonipat - HSPCB",8760,8760,0,100.0
+site_5044,Haryana,Dharuhera,"Municipal Corporation Office, Dharuhera -  HSPCB",8760,8760,0,100.0
+site_5043,Haryana,Kurukshetra ,"Sector-7, Kurukshetra - HSPCB",8760,8760,0,100.0
+site_5045,Haryana,Bahadurgarh,"Arya Nagar, Bahadurgarh - HSPCB",8760,8760,0,100.0
+site_5046,Haryana,Yamuna Nagar,"Gobind Pura, Yamuna Nagar - HSPCB",8760,8760,0,100.0
+site_5050,Haryana,Palwal ,"Shyam Nagar, Palwal - HSPCB",8760,8760,0,100.0
+site_5047,Haryana,Bhiwani,"H.B. Colony, Bhiwani - HSPCB",8760,8760,0,100.0
+site_5048,Haryana,Panipat,"Sector-18, Panipat - HSPCB",8760,8760,0,100.0
+site_5049,Haryana,Karnal,"Sector-12, Karnal - HSPCB",8760,8760,0,100.0
+site_5052,Haryana,Ambala,"Patti Mehar, Ambala - HSPCB",8760,8760,0,100.0
+site_5051,Haryana,Sirsa,"F-Block, Sirsa - HSPCB",8760,8760,0,100.0
+site_5053,Haryana,Narnaul,"Shastri Nagar, Narnaul - HSPCB",8760,8760,0,100.0
+site_5054,Haryana,Fatehabad,"Huda Sector, Fatehabad - HSPCB",8760,8760,0,100.0
+site_5345,Haryana,Gurugram,"Sector-51, Gurugram - HSPCB",8760,8760,0,100.0
+site_5341,Haryana,Faridabad,"Sector 30, Faridabad - HSPCB",8760,8760,0,100.0
+site_5056,Haryana,Jind,"Police Lines, Jind - HSPCB",8760,8760,0,100.0
+site_5057,Haryana,Hisar,"Urban Estate-II, Hisar - HSPCB",8760,8760,0,100.0
+site_5060,Haryana,Ballabgarh,"Nathu Colony, Ballabgarh - HSPCB",8760,8760,0,100.0
+site_5072,Haryana,Kaithal,"Rishi Nagar, Kaithal - HSPCB",8760,8760,0,100.0
+site_5127,Chandigarh,Chandigarh,"Sector-25, Chandigarh - CPCC",8760,8760,0,100.0
+site_5339,Haryana,Charkhi Dadri,"Mini Secretariat, Charkhi Dadri - HSPCB",8760,8760,0,100.0
+site_5582,Chandigarh,Chandigarh,"Sector-53, Chandigarh - CPCC",8760,8760,0,100.0
+site_5491,Chandigarh,Chandigarh,"Sector 22, Chandigarh - CPCC",8760,8760,0,100.0
+site_5342,Haryana,Faridabad,"Sector 11, Faridabad - HSPCB",8760,8760,0,100.0
+site_5344,Haryana,Gurugram,"Teri Gram, Gurugram - HSPCB",8760,8760,0,100.0
+site_6011,Haryana,Panchgaon,"Amity University, Panchgaon - IITM",8760,8760,0,100.0
+site_253,Punjab,Ludhiana,"Punjab Agricultural University, Ludhiana - PPCB",8604,8760,156,98.22
+site_256,Punjab,Amritsar,"Golden Temple, Amritsar - PPCB",8494,8760,266,96.96
+site_161,Haryana,Panchkula,"Sector-6, Panchkula - HSPCB ",2957,8760,5803,33.76

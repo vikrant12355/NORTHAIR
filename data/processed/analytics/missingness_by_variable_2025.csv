@@ -1,0 +1,14 @@
+variable,name,missing_count,missing_pct
+pm25,PM2.5 (Fine Particulate),195338,47.15404762766895
+no2,NO2 (Nitrogen Dioxide),198989,48.03538883055123
+pm10,PM10 (Coarse Particulate),199380,48.12977513850164
+ozone,Ozone (O3),205944,49.714306405474886
+co,CO (Carbon Monoxide),207162,50.008328203642684
+ws,Horizontal Wind Speed (WS),213801,51.6109642611435
+so2,SO2 (Sulfur Dioxide),217464,52.495202230510195
+rf,Rainfall (RF),233377,56.336555986047244
+rh,Relative Humidity (RH),234211,56.53788125671386
+sr,Solar Radiation (SR),243503,58.78094410447671
+temp,Ambient Temperature (AT),295005,71.21338306115798
+bp,Barometric Pressure (BP),336968,81.34313405993893
+vws,Vertical Wind Speed (VWS),407220,98.3017706485136
