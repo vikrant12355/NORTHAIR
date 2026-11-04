@@ -1,0 +1,52 @@
+Station ID,State,City,Station Name,Distinct_Names,Distinct_Cities,Distinct_States,Total_Combinations,Historical_Record_Count
+site_5046,Haryana,Yamuna Nagar,Nehru Nagar Kanpur UPPCB,40,1,1,40,2244
+site_5046,Haryana,Yamuna Nagar,Adarsh Nagar Jaipur RSPCB,40,1,1,40,2236
+site_5046,Haryana,Yamuna Nagar,Shastri Nagar Jaipur RSPCB,40,1,1,40,2218
+site_5046,Haryana,Yamuna Nagar,Arya Nagar Bahadurgarh HSPCB,40,1,1,40,1806
+site_5046,Haryana,Yamuna Nagar,Shyam Nagar Palwal HSPCB,40,1,1,40,1791
+site_5046,Haryana,Yamuna Nagar,Gobind Pura Yamuna Nagar HSPCB,40,1,1,40,1784
+site_5046,Haryana,Yamuna Nagar,Sanjay Nagar Ghaziabad UPPCB,40,1,1,40,1732
+site_5046,Haryana,Yamuna Nagar,Shasthri Nagar Ratlam IPCA Lab,40,1,1,40,1701
+site_5046,Haryana,Yamuna Nagar,Lal Bahadur Shastri Nagar Kalaburagi KSPCB,40,1,1,40,1666
+site_5046,Haryana,Yamuna Nagar,T T Nagar Bhopal MPPCB,40,1,1,40,1553
+site_5046,Haryana,Yamuna Nagar,Lajpat Nagar Moradabad UPPCB,40,1,1,40,1332
+site_5046,Haryana,Yamuna Nagar,Deen Dayal Nagar Sagar MPPCB,40,1,1,40,1202
+site_5046,Haryana,Yamuna Nagar,Jawahar Nagar Puducherry PPCC,40,1,1,40,1076
+site_5046,Haryana,Yamuna Nagar,Diwator Nagar Koppal KSPCB,40,1,1,40,989
+site_5046,Haryana,Yamuna Nagar,Nagar Nigam Prayagraj UPPCB,40,1,1,40,883
+site_5046,Haryana,Yamuna Nagar,Anthoni Pillai Nagar Gummidipoondi TNPCB,40,1,1,40,859
+site_5046,Haryana,Yamuna Nagar,FTI Kidwai Nagar Kanpur UPPCB,40,1,1,40,849
+site_5046,Haryana,Yamuna Nagar,Mariam Nagar Purnia BSPCB,40,1,1,40,766
+site_5046,Haryana,Yamuna Nagar,Darshan Nagar Chhapra BSPCB,40,1,1,40,758
+site_5046,Haryana,Yamuna Nagar,Shivaji Nagar Jhansi UPPCB,40,1,1,40,692
+site_5046,Haryana,Yamuna Nagar,Gurdeo Nagar Aurangabad BSPCB,40,1,1,40,639
+site_5046,Haryana,Yamuna Nagar,Ashwini Nagar Haveri KSPCB,40,1,1,40,589
+site_5046,Haryana,Yamuna Nagar,Kashiram Nagar Moradabad UPPCB,40,1,1,40,561
+site_5046,Haryana,Yamuna Nagar,Transport Nagar Moradabad UPPCB,40,1,1,40,559
+site_5046,Haryana,Yamuna Nagar,Ramteerth Nagar Belgaum KSPCB,40,1,1,40,497
+site_5046,Haryana,Yamuna Nagar,Urja Nagar Korba CECB,40,1,1,40,355
+site_5046,Haryana,Yamuna Nagar,Krishna Nagar Bharatpur RSPCB,40,1,1,40,332
+site_5046,Haryana,Yamuna Nagar,Shastri Nagar Tonk RSPCB,40,1,1,40,319
+site_5046,Haryana,Yamuna Nagar,Shivaji Nagar Rishikesh UKPCB,40,1,1,40,318
+site_5046,Haryana,Yamuna Nagar,Shastri Nagar Chittorgarh RSPCB,40,1,1,40,303
+site_5046,Haryana,Yamuna Nagar,Indra Nagar Jhunjhunu RSPCB,40,1,1,40,299
+site_5046,Haryana,Yamuna Nagar,Pragati Nagar Pratapgarh RSPCB,40,1,1,40,299
+site_5046,Haryana,Yamuna Nagar,Sahu Nagar Sawai Madhopur RSPCB,40,1,1,40,299
+site_5046,Haryana,Yamuna Nagar,Rajlaxmi Nagar Jhalawar RSPCB,40,1,1,40,297
+site_5046,Haryana,Yamuna Nagar,Sardar Patel Nagar Dhanbad JSPCB,40,1,1,40,277
+site_5046,Haryana,Yamuna Nagar,Dnyaneshwar Nagar Solapur MPCB,40,1,1,40,230
+site_5046,Haryana,Yamuna Nagar,Pratap Nagar Bhilwara RSPCB,40,1,1,40,222
+site_5046,Haryana,Yamuna Nagar,Mahesh Nagar Malegaon MPCB,40,1,1,40,188
+site_5046,Haryana,Yamuna Nagar,Sneh Nagar Nanded MPCB,40,1,1,40,183
+site_5046,Haryana,Yamuna Nagar,Sidhi Vinayak Nagar Ulhasnagar MPCB,40,1,1,40,163
+site_5341,Haryana,Faridabad,Sector- 16A Faridabad HSPCB,4,1,1,4,2291
+site_5341,Haryana,Faridabad,Sector 30 Faridabad HSPCB,4,1,1,4,1307
+site_5341,Haryana,Faridabad,New Industrial Town Faridabad HSPCB,4,1,1,4,1267
+site_5341,Haryana,Faridabad,Sector 11 Faridabad HSPCB,4,1,1,4,1215
+site_5344,Haryana,Gurugram,Vikas Sadan Gurugram HSPCB,4,1,1,4,2342
+site_5344,Haryana,Gurugram,NISE Gwal Pahari Gurugram IMD,4,1,1,4,1638
+site_5344,Haryana,Gurugram,Sector-51 Gurugram HSPCB,4,1,1,4,1396
+site_5344,Haryana,Gurugram,Teri Gram Gurugram HSPCB,4,1,1,4,1391
+site_5582,Chandigarh,Chandigarh,Sector-25 Chandigarh CPCC,3,1,1,3,1600
+site_5582,Chandigarh,Chandigarh,Sector 22 Chandigarh CPCC,3,1,1,3,843
+site_5582,Chandigarh,Chandigarh,Sector-53 Chandigarh CPCC,3,1,1,3,699
