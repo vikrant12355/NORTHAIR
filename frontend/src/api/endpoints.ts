@@ -54,6 +54,10 @@ export const ENDPOINTS = {
   QUALITY_COVERAGE: '/quality/coverage',
   QUALITY_IDENTITIES: '/quality/station-identities',
 
+  // Map Intelligence
+  MAP_STATIONS: '/map/stations',
+  MAP_REGIONS: '/map/regions',
+
   // Exports
   EXPORT_MEASUREMENTS: '/exports/measurements.csv',
   EXPORT_STATIONS: '/exports/stations.csv',

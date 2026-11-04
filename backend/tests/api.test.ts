@@ -13,10 +13,10 @@ describe('NorthAir Intelligence API Integration Tests', () => {
       await dbManager.initialize();
       const app = createApp();
       await new Promise<void>((resolve, reject) => {
-        server = app.listen(0, () => {
+        server = app.listen(0, '127.0.0.1', () => {
           const address = server.address();
           if (typeof address === 'object' && address !== null) {
-            baseUrl = `http://localhost:${address.port}`;
+            baseUrl = `http://127.0.0.1:${address.port}`;
           }
           resolve();
         });

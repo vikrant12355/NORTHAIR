@@ -20,6 +20,7 @@ const routeTitles: Record<string, string> = {
   '/compliance': 'CPCB Standards & Statutory Compliance',
   '/explorer': 'Raw Telemetry & Metric Data Explorer',
   '/methodology': 'Scientific Methodology & Breakpoint Formulas',
+  '/map': 'North India Pollution Intelligence Map',
 };
 
 export const Header: React.FC = () => {

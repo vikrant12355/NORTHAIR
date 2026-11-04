@@ -69,7 +69,11 @@ class DatabaseManager {
     });
   }
 
-  public query<T = any>(sql: string, params: any[] = [], useCache = false): Promise<T[]> {
+  public async query<T = any>(sql: string, params: any[] = [], useCache = false): Promise<T[]> {
+    if (!this.isInitialized) {
+      await this.initialize();
+    }
+
     const cacheKey = useCache ? `${sql}::${JSON.stringify(params)}` : '';
     if (useCache && this.cache.has(cacheKey)) {
       const cached = this.cache.get(cacheKey)!;

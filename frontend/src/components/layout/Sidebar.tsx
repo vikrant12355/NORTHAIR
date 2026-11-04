@@ -18,6 +18,7 @@ import {
   CheckCircle2,
   Database,
   BookOpen,
+  Map,
 } from 'lucide-react';
 
 interface NavSection {
@@ -26,6 +27,7 @@ interface NavSection {
     label: string;
     path: string;
     icon: React.ElementType;
+    highlight?: boolean;
   }>;
 }
 
@@ -34,6 +36,7 @@ const navSections: NavSection[] = [
     title: 'Intelligence Matrix',
     items: [
       { label: 'Overview', path: '/', icon: LayoutDashboard },
+      { label: '🗺 Pollution Map', path: '/map', icon: Map, highlight: true },
       { label: 'Regional Intelligence', path: '/regional', icon: MapPin },
       { label: 'Hotspot Explorer', path: '/hotspots', icon: Flame },
       { label: 'Pollutant Analytics', path: '/pollutants', icon: Activity },
@@ -113,6 +116,8 @@ export const Sidebar: React.FC = () => {
                         `flex items-center gap-2.5 px-2.5 py-2 rounded-lg text-[13px] font-medium transition-colors ${
                           isActive
                             ? 'bg-[#286b4e] text-white shadow-sm'
+                            : item.highlight
+                            ? 'text-[#055237] hover:bg-[#EAF3ED] font-semibold'
                             : 'text-[#404943] hover:bg-[#F0F5EE] hover:text-[#181d19]'
                         }`
                       }
@@ -130,8 +135,8 @@ export const Sidebar: React.FC = () => {
 
       {/* Footer Meta */}
       <div className="p-4 border-t border-[#E9EDE9] bg-[#FAFAF8] flex items-center justify-between text-[11px] text-[#737B75] font-mono">
-        <span>v4.2 CPCB Core</span>
-        <span>Chandigarh HQ</span>
+        <span>v5.0 Map Edition</span>
+        <span>VIZ-A-THON 2026</span>
       </div>
     </aside>
   );

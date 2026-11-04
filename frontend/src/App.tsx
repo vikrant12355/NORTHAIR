@@ -21,14 +21,17 @@ import { QualityPage } from './pages/quality/QualityPage';
 import { CompliancePage } from './pages/compliance/CompliancePage';
 import { ExplorerPage } from './pages/explorer/ExplorerPage';
 import { MethodologyPage } from './pages/methodology/MethodologyPage';
+import { MapPage } from './pages/map/MapPage';
 
 export const App: React.FC = () => {
   return (
     <BrowserRouter>
+    
       <Layout>
         <Routes>
           {/* Intelligence Matrix */}
           <Route path="/" element={<OverviewPage />} />
+          <Route path="/map" element={<MapPage />} />
           <Route path="/regional" element={<RegionalPage />} />
           <Route path="/hotspots" element={<HotspotsPage />} />
           <Route path="/pollutants" element={<PollutantsPage />} />

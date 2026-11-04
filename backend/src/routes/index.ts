@@ -9,9 +9,38 @@ import historicalRoutes from './historical.routes.js';
 import analyticsRoutes from './analytics.routes.js';
 import qualityRoutes from './quality.routes.js';
 import exportsRoutes from './exports.routes.js';
+import mapRoutes from './map.routes.js';
 import { getHealth, getMeta, getFilters, getFindings, getMethodology } from '../controllers/system.controller.js';
 
 const apiRouter = Router();
+
+// Root API status endpoint
+apiRouter.get('/', (_req, res) => {
+  res.json({
+    success: true,
+    data: {
+      name: 'NorthAir Intelligence REST API',
+      version: '1.0.0',
+      description: 'Vectorized environmental telemetry engine powered by Express and DuckDB',
+      status: 'active',
+      endpoints: [
+        '/api/health',
+        '/api/meta',
+        '/api/filters',
+        '/api/overview/summary',
+        '/api/regions',
+        '/api/stations',
+        '/api/hotspots',
+        '/api/pollutants',
+        '/api/weather',
+        '/api/historical',
+        '/api/analytics',
+        '/api/quality',
+        '/api/exports/measurements.csv'
+      ]
+    }
+  });
+});
 
 // System routes
 apiRouter.get('/health', getHealth);
@@ -31,6 +60,7 @@ apiRouter.use('/historical', historicalRoutes);
 apiRouter.use('/analytics', analyticsRoutes);
 apiRouter.use('/quality', qualityRoutes);
 apiRouter.use('/exports', exportsRoutes);
+apiRouter.use('/map', mapRoutes);
 
 export default apiRouter;
 
