@@ -1,13 +1,31 @@
 import { Router } from 'express';
-import { getMapStations, getMapRegions } from '../controllers/map.controller.js';
+import {
+  getMapStations,
+  getMapRegions,
+  getMapSummary,
+  getMapLegend,
+  getMapFeatureValues,
+  getStationDetail,
+} from '../controllers/map.controller.js';
 
 const mapRouter = Router();
 
-// GET /api/map/stations?pollutant=PM25&state=ALL&city=ALL
-mapRouter.get('/stations', getMapStations);
-
-// GET /api/map/regions?pollutant=PM25
+// 1. GET /api/map/regions
 mapRouter.get('/regions', getMapRegions);
 
-export default mapRouter;
+// 2. GET /api/map/summary
+mapRouter.get('/summary', getMapSummary);
 
+// 3. GET /api/map/legend
+mapRouter.get('/legend', getMapLegend);
+
+// 4. GET /api/map/feature-values
+mapRouter.get('/feature-values', getMapFeatureValues);
+
+// 5. GET /api/map/stations/:stationId
+mapRouter.get('/stations/:stationId', getStationDetail);
+
+// 6. GET /api/map/stations
+mapRouter.get('/stations', getMapStations);
+
+export default mapRouter;

@@ -57,6 +57,10 @@ export const ENDPOINTS = {
   // Map Intelligence
   MAP_STATIONS: '/map/stations',
   MAP_REGIONS: '/map/regions',
+  MAP_SUMMARY: '/map/summary',
+  MAP_LEGEND: '/map/legend',
+  MAP_FEATURES: '/map/feature-values',
+  MAP_STATION_DETAIL: (id: string) => `/map/stations/${id}`,
 
   // Exports
   EXPORT_MEASUREMENTS: '/exports/measurements.csv',

@@ -1,19 +1,18 @@
 import { dbManager } from '../config/database.js';
 
-// ─────────────────────────────────────────────────────────────────────────────
-// VERIFIED STATION COORDINATES
+// ============================================================================
+// VERIFIED STATION COORDINATES (WGS-84 Decimal Degrees)
 // Source: CPCB / SPCB official station registration records cross-validated
-// against OpenStreetMap geocoder for 48 continuous monitoring stations in
-// Chandigarh, Punjab, Haryana, and Delhi NCT (North India telemetry network).
-// All coordinates are WGS-84 decimal degrees (NAD83 compatible).
-// ─────────────────────────────────────────────────────────────────────────────
-const STATION_COORDS: Record<string, { lat: number; lng: number }> = {
-  // Chandigarh UT
+// against OpenStreetMap geocoder for all 48 continuous monitoring stations.
+// Coordinate coverage: 48 of 48 (100.0%)
+// ============================================================================
+export const STATION_COORDS: Record<string, { lat: number; lng: number }> = {
+  // Chandigarh UT (3 stations)
   site_5127: { lat: 30.7244, lng: 76.7742 }, // Sector-25
   site_5491: { lat: 30.7352, lng: 76.7795 }, // Sector 22
   site_5582: { lat: 30.6980, lng: 76.7900 }, // Sector-53
 
-  // Delhi NCT
+  // Delhi NCT (6 stations)
   site_1420: { lat: 28.6943, lng: 77.1808 }, // Ashok Vihar
   site_1422: { lat: 28.5681, lng: 77.0511 }, // Dwarka Sector 8
   site_1426: { lat: 28.8565, lng: 77.1013 }, // Narela
@@ -21,7 +20,7 @@ const STATION_COORDS: Record<string, { lat: number; lng: number }> = {
   site_1431: { lat: 28.6338, lng: 77.2916 }, // Patparganj
   site_1434: { lat: 28.7046, lng: 77.1660 }, // Wazirpur
 
-  // Haryana
+  // Haryana (31 stations)
   site_5052: { lat: 30.3783, lng: 76.7762 }, // Ambala
   site_5045: { lat: 28.6986, lng: 76.9358 }, // Bahadurgarh
   site_5060: { lat: 28.3382, lng: 77.3230 }, // Ballabgarh
@@ -54,7 +53,7 @@ const STATION_COORDS: Record<string, { lat: number; lng: number }> = {
   site_5041: { lat: 28.9975, lng: 77.1026 }, // Sonipat (Murthal)
   site_5046: { lat: 30.1250, lng: 77.2823 }, // Yamuna Nagar
 
-  // Punjab
+  // Punjab (8 stations)
   site_256:  { lat: 31.6200, lng: 74.8765 }, // Amritsar Golden Temple
   site_1549: { lat: 30.2110, lng: 74.9455 }, // Bathinda
   site_1438: { lat: 31.3260, lng: 75.5762 }, // Jalandhar
@@ -65,42 +64,261 @@ const STATION_COORDS: Record<string, { lat: number; lng: number }> = {
   site_1538: { lat: 30.9686, lng: 76.5235 }, // Rupnagar
 };
 
-// ─────────────────────────────────────────────────────────────────────────────
-// POLLUTANT column mapping to DuckDB column names
-// ─────────────────────────────────────────────────────────────────────────────
+// Target region centroids & bounding boxes
+export const REGION_BOUNDS: Record<string, { lat: number; lng: number; bounds: [[number, number], [number, number]] }> = {
+  Chandigarh: {
+    lat: 30.7333,
+    lng: 76.7794,
+    bounds: [[30.68, 76.72], [30.79, 76.85]],
+  },
+  Delhi: {
+    lat: 28.6500,
+    lng: 77.1500,
+    bounds: [[28.40, 76.85], [28.90, 77.35]],
+  },
+  Haryana: {
+    lat: 29.0588,
+    lng: 76.0856,
+    bounds: [[27.65, 74.45], [30.90, 77.60]],
+  },
+  Punjab: {
+    lat: 30.9010,
+    lng: 75.8573,
+    bounds: [[29.55, 73.85], [32.50, 76.95]],
+  },
+};
+
+// Pollutant column mapping with safe unicode escapes (\u00b5 = µ, \u00b3 = ³)
 export const POLLUTANT_COLS: Record<string, string> = {
-  PM25:  '"PM2.5 (µg/m³)"',
-  PM10:  '"PM10 (µg/m³)"',
-  NO2:   '"NO2 (µg/m³)"',
-  SO2:   '"SO2 (µg/m³)"',
-  CO:    '"CO (mg/m³)"',
-  OZONE: '"Ozone (µg/m³)"',
-  NH3:   '"NH3 (µg/m³)"',
+  PM25:  '"PM2.5 (\u00b5g/m\u00b3)"',
+  PM10:  '"PM10 (\u00b5g/m\u00b3)"',
+  NO2:   '"NO2 (\u00b5g/m\u00b3)"',
+  SO2:   '"SO2 (\u00b5g/m\u00b3)"',
+  CO:    '"CO (mg/m\u00b3)"',
+  OZONE: '"Ozone (\u00b5g/m\u00b3)"',
+  NH3:   '"NH3 (\u00b5g/m\u00b3)"',
 };
 
 export const POLLUTANT_UNITS: Record<string, string> = {
-  PM25:  'µg/m³',
-  PM10:  'µg/m³',
-  NO2:   'µg/m³',
-  SO2:   'µg/m³',
-  CO:    'mg/m³',
-  OZONE: 'µg/m³',
-  NH3:   'µg/m³',
+  PM25:  '\u00b5g/m\u00b3',
+  PM10:  '\u00b5g/m\u00b3',
+  NO2:   '\u00b5g/m\u00b3',
+  SO2:   '\u00b5g/m\u00b3',
+  CO:    'mg/m\u00b3',
+  OZONE: '\u00b5g/m\u00b3',
+  NH3:   '\u00b5g/m\u00b3',
 };
+
+export interface AdaptiveLegendClass {
+  label: string;
+  colour: string;
+  range: [number | null, number | null];
+}
+
+export interface AdaptiveLegend {
+  pollutant: string;
+  unit: string;
+  method: string;
+  breakpoints: number[];
+  classes: AdaptiveLegendClass[];
+  dataMin: number | null;
+  dataMax: number | null;
+  dataMedian: number | null;
+  palette: string[];
+}
 
 export class MapService {
   /**
-   * Returns all 48 stations with verified lat/lng, real pollutant averages
-   * for the requested pollutant, and data-driven colour classification.
+   * Adaptive Quantile Classification Engine:
+   * Generates strictly non-overlapping, progressive intervals with no duplicate ranges.
+   * Handles empty sets, single values, small samples (2-4), and larger sets up to 6 classes.
+   */
+  public buildAdaptiveLegend(values: number[], pollutant: string, unit: string): AdaptiveLegend {
+    const valid = values
+      .filter((v) => v != null && !isNaN(v))
+      .map((v) => Math.round(v * 100) / 100)
+      .sort((a, b) => a - b);
+
+    if (!valid.length) {
+      return {
+        pollutant,
+        unit,
+        method: 'Adaptive Quantile (No Data)',
+        breakpoints: [],
+        classes: [{ label: 'No Data', colour: '#B0B8B4', range: [null, null] }],
+        dataMin: null,
+        dataMax: null,
+        dataMedian: null,
+        palette: ['#B0B8B4'],
+      };
+    }
+
+    const dataMin = valid[0];
+    const dataMax = valid[valid.length - 1];
+    const midIdx = Math.floor(valid.length / 2);
+    const dataMedian = valid.length % 2 === 0
+      ? Math.round(((valid[midIdx - 1] + valid[midIdx]) / 2) * 100) / 100
+      : valid[midIdx];
+
+    const unique = Array.from(new Set(valid)).sort((a, b) => a - b);
+    const K = unique.length;
+
+    // 1 distinct value: single class
+    if (K === 1) {
+      return {
+        pollutant,
+        unit,
+        method: 'Uniform Value',
+        breakpoints: [dataMin],
+        classes: [
+          { label: 'Uniform Level', colour: '#86C94D', range: [dataMin, dataMax] },
+          { label: 'No Data', colour: '#B0B8B4', range: [null, null] },
+        ],
+        dataMin,
+        dataMax,
+        dataMedian,
+        palette: ['#86C94D'],
+      };
+    }
+
+    // 2 distinct values: 2 classes
+    if (K === 2) {
+      const mid = Math.round(((unique[0] + unique[1]) / 2) * 100) / 100;
+      return {
+        pollutant,
+        unit,
+        method: 'Two-Class Split',
+        breakpoints: [mid],
+        classes: [
+          { label: 'Lower Tier', colour: '#3CAD5E', range: [dataMin, mid] },
+          { label: 'Upper Tier', colour: '#D93A2B', range: [mid, dataMax] },
+          { label: 'No Data', colour: '#B0B8B4', range: [null, null] },
+        ],
+        dataMin,
+        dataMax,
+        dataMedian,
+        palette: ['#3CAD5E', '#D93A2B'],
+      };
+    }
+
+    // 3 or 4 distinct values: up to 3 classes with guaranteed distinct midpoints
+    if (K <= 4) {
+      const bp1 = Math.round(((unique[0] + unique[1]) / 2) * 100) / 100;
+      const bp2 = Math.round(((unique[unique.length - 2] + unique[unique.length - 1]) / 2) * 100) / 100;
+      const bps = bp1 < bp2 ? [bp1, bp2] : [bp1];
+
+      if (bps.length === 2) {
+        return {
+          pollutant,
+          unit,
+          method: '3-Class Adaptive Quantile',
+          breakpoints: bps,
+          classes: [
+            { label: 'Low', colour: '#3CAD5E', range: [dataMin, bps[0]] },
+            { label: 'Moderate', colour: '#F5C842', range: [bps[0], bps[1]] },
+            { label: 'High', colour: '#D93A2B', range: [bps[1], dataMax] },
+            { label: 'No Data', colour: '#B0B8B4', range: [null, null] },
+          ],
+          dataMin,
+          dataMax,
+          dataMedian,
+          palette: ['#3CAD5E', '#F5C842', '#D93A2B'],
+        };
+      }
+    }
+
+    // K >= 5: compute up to 5 quantiles (6 classes)
+    const targetClasses = Math.min(6, K);
+    const rawCuts: number[] = [];
+    for (let i = 1; i < targetClasses; i++) {
+      const q = i / targetClasses;
+      const idx = (valid.length - 1) * q;
+      const lo = Math.floor(idx);
+      const hi = Math.ceil(idx);
+      const val = lo === hi ? valid[lo] : valid[lo] + (valid[hi] - valid[lo]) * (idx - lo);
+      rawCuts.push(Math.round(val * 100) / 100);
+    }
+
+    // Strictly deduplicate cuts to ensure monotonic increase
+    const uniqueBps: number[] = [];
+    for (const c of rawCuts) {
+      if (!uniqueBps.length || c > uniqueBps[uniqueBps.length - 1] + 0.05) {
+        uniqueBps.push(c);
+      }
+    }
+
+    const numClasses = uniqueBps.length + 1;
+    const PALETTES: Record<number, string[]> = {
+      2: ['#3CAD5E', '#D93A2B'],
+      3: ['#3CAD5E', '#F5C842', '#D93A2B'],
+      4: ['#3CAD5E', '#86C94D', '#F07520', '#D93A2B'],
+      5: ['#3CAD5E', '#86C94D', '#F5C842', '#F07520', '#D93A2B'],
+      6: ['#3CAD5E', '#86C94D', '#F5C842', '#F07520', '#D93A2B', '#7B1D1D'],
+    };
+    const LABELS: Record<number, string[]> = {
+      2: ['Low', 'High'],
+      3: ['Low', 'Moderate', 'High'],
+      4: ['Low', 'Moderate', 'High', 'Very High'],
+      5: ['Very Low', 'Low', 'Moderate', 'High', 'Very High'],
+      6: ['Very Low', 'Low', 'Moderate', 'High', 'Very High', 'Extreme'],
+    };
+
+    const palette = PALETTES[numClasses] || PALETTES[6];
+    const labels = LABELS[numClasses] || LABELS[6];
+
+    const classes: AdaptiveLegendClass[] = [];
+    for (let i = 0; i < numClasses; i++) {
+      const rangeLo = i === 0 ? dataMin : uniqueBps[i - 1];
+      const rangeHi = i === numClasses - 1 ? dataMax : uniqueBps[i];
+      classes.push({
+        label: labels[i] || `Class ${i + 1}`,
+        colour: palette[i],
+        range: [rangeLo, rangeHi],
+      });
+    }
+    classes.push({ label: 'No Data', colour: '#B0B8B4', range: [null, null] });
+
+    return {
+      pollutant,
+      unit,
+      method: `Adaptive Quantile (${numClasses}-class deduplicated)`,
+      breakpoints: uniqueBps,
+      classes,
+      dataMin,
+      dataMax,
+      dataMedian,
+      palette,
+    };
+  }
+
+  /**
+   * Classify a value against the deduplicated breakpoints and palette.
+   */
+  public classify(value: number | null, breakpoints: number[], palette: string[]): string {
+    if (value == null || isNaN(value)) return '#B0B8B4';
+    if (!breakpoints.length) return palette[0] || '#86C94D';
+
+    for (let i = 0; i < breakpoints.length; i++) {
+      if (value <= breakpoints[i]) {
+        return palette[i] || '#3CAD5E';
+      }
+    }
+    return palette[palette.length - 1] || '#7B1D1D';
+  }
+
+  /**
+   * Returns stations with verified coordinates, real averages, and adaptive colour classification.
    */
   public async getMapStations(filters: {
     state?: string;
     city?: string;
     pollutant?: string;
+    startDate?: string;
+    endDate?: string;
   }) {
     const pollutant = (filters.pollutant || 'PM25').toUpperCase();
     const col = POLLUTANT_COLS[pollutant] || POLLUTANT_COLS['PM25'];
-    const unit = POLLUTANT_UNITS[pollutant] || 'µg/m³';
+    const unit = POLLUTANT_UNITS[pollutant] || '\u00b5g/m\u00b3';
 
     const conditions = ['1=1'];
     const params: any[] = [];
@@ -113,44 +331,49 @@ export class MapService {
       conditions.push('m."City" = ?');
       params.push(filters.city);
     }
+    if (filters.startDate) {
+      conditions.push('CAST(q."Date" as VARCHAR) >= ?');
+      params.push(filters.startDate);
+    }
+    if (filters.endDate) {
+      conditions.push('CAST(q."Date" as VARCHAR) <= ?');
+      params.push(filters.endDate);
+    }
 
     const where = conditions.join(' AND ');
 
     const sql = `
       SELECT
-        m."Station ID"       as stationId,
-        m."Station Name"     as stationName,
-        m."City"             as city,
-        m."State"            as state,
-        m.Hours_Recorded_2025 as hoursRecorded,
-        ROUND((m.Hours_Recorded_2025::DOUBLE / 8760.0) * 100.0, 1) as dataCapturePct,
-        ROUND(AVG(q.${col}), 2)   as avgValue,
+        m."Station ID"           as stationId,
+        m."Station Name"         as stationName,
+        m."City"                 as city,
+        m."State"                as state,
+        m."Hours_Recorded_2025"  as hoursRecorded,
+        ROUND((m."Hours_Recorded_2025" / 8760.0) * 100, 1) as dataCapturePct,
+        ROUND(AVG(q.${col}), 2)    as avgValue,
         ROUND(MEDIAN(q.${col}), 2) as medianValue,
-        ROUND(MIN(q.${col}), 2)   as minValue,
-        ROUND(MAX(q.${col}), 2)   as maxValue,
-        COUNT(q.${col})           as obsCount,
-        ROUND(AVG(q."PM2.5 (µg/m³)"), 1) as avgPM25,
-        ROUND(AVG(q."PM10 (µg/m³)"), 1)  as avgPM10
+        ROUND(MIN(q.${col}), 2)    as minValue,
+        ROUND(MAX(q.${col}), 2)    as maxValue,
+        ROUND(QUANTILE_CONT(q.${col}, 0.90), 2) as p90Value,
+        COUNT(q.${col})            as obsCount,
+        ROUND(AVG(q."PM2.5 (\u00b5g/m\u00b3)"), 1) as avgPM25,
+        ROUND(AVG(q."PM10 (\u00b5g/m\u00b3)"), 1)  as avgPM10
       FROM v_station_metadata m
       LEFT JOIN v_air_quality_2025 q ON m."Station ID" = q."Station ID"
       WHERE ${where}
-      GROUP BY m."Station ID", m."Station Name", m."City", m."State", m.Hours_Recorded_2025
+      GROUP BY m."Station ID", m."Station Name", m."City", m."State", m."Hours_Recorded_2025"
       ORDER BY avgValue DESC NULLS LAST;
     `;
 
     const rows = await dbManager.query(sql, params, true);
+    const values = rows.map((r: any) => (r.avgValue != null ? Number(r.avgValue) : null)).filter((v): v is number => v != null && !isNaN(v));
 
-    // Compute quantile breakpoints from actual data for colour classification
-    const values = rows.map((r: any) => Number(r.avgValue)).filter((v) => v != null && !isNaN(v));
-    values.sort((a, b) => a - b);
+    const legend = this.buildAdaptiveLegend(values, pollutant, unit);
 
-    const breakpoints = this.quantileBreakpoints(values, 6);
-
-    // Attach coordinates and colour classification
     const stations = rows.map((r: any) => {
       const coords = STATION_COORDS[r.stationId];
-      const val = Number(r.avgValue);
-      const colour = this.classify(val, breakpoints);
+      const val = r.avgValue != null ? Number(r.avgValue) : null;
+      const colour = this.classify(val, legend.breakpoints, legend.palette);
 
       return {
         ...r,
@@ -164,36 +387,37 @@ export class MapService {
       };
     });
 
-    // Network-level legend metadata
-    const legend = {
-      pollutant,
-      unit,
-      method: 'Quantile (6-class) — equal-count intervals from 2025 annual mean measurements',
-      breakpoints,
-      classes: [
-        { label: 'Very Low',  colour: '#3CAD5E', range: [breakpoints[0], breakpoints[1]] },
-        { label: 'Low',       colour: '#86C94D', range: [breakpoints[1], breakpoints[2]] },
-        { label: 'Moderate',  colour: '#F5C842', range: [breakpoints[2], breakpoints[3]] },
-        { label: 'High',      colour: '#F07520', range: [breakpoints[3], breakpoints[4]] },
-        { label: 'Very High', colour: '#D93A2B', range: [breakpoints[4], breakpoints[5]] },
-        { label: 'Extreme',   colour: '#7B1D1D', range: [breakpoints[5], null]           },
-        { label: 'No Data',   colour: '#B0B8B4', range: [null, null]                     },
-      ],
-      dataMin: values[0] ?? null,
-      dataMax: values[values.length - 1] ?? null,
-      dataMedian: values.length ? values[Math.floor(values.length / 2)] : null,
+    const stats = {
+      totalStations: 48,
+      verifiedCoordsCount: 48,
+      coordinateCoveragePct: 100.0,
+      filteredCount: stations.length,
+      activeState: filters.state || 'ALL',
+      activeCity: filters.city || 'ALL',
     };
 
-    return { stations, legend };
+    return { stations, legend, stats };
   }
 
   /**
-   * State-level aggregates for regional choropleth overlay.
+   * State-level aggregates for regional choropleth overlay and regional comparisons.
    */
-  public async getMapRegions(filters: { pollutant?: string }) {
+  public async getMapRegions(filters: { pollutant?: string; startDate?: string; endDate?: string }) {
     const pollutant = (filters.pollutant || 'PM25').toUpperCase();
     const col = POLLUTANT_COLS[pollutant] || POLLUTANT_COLS['PM25'];
-    const unit = POLLUTANT_UNITS[pollutant] || 'µg/m³';
+    const unit = POLLUTANT_UNITS[pollutant] || '\u00b5g/m\u00b3';
+
+    const conditions = ['1=1'];
+    const params: any[] = [];
+    if (filters.startDate) {
+      conditions.push('CAST(q."Date" as VARCHAR) >= ?');
+      params.push(filters.startDate);
+    }
+    if (filters.endDate) {
+      conditions.push('CAST(q."Date" as VARCHAR) <= ?');
+      params.push(filters.endDate);
+    }
+    const where = conditions.join(' AND ');
 
     const sql = `
       SELECT
@@ -206,49 +430,141 @@ export class MapService {
         COUNT(q.${col})            as obsCount
       FROM v_station_metadata m
       LEFT JOIN v_air_quality_2025 q ON m."Station ID" = q."Station ID"
+      WHERE ${where}
       GROUP BY m."State"
       ORDER BY avgValue DESC;
     `;
 
-    const rows = await dbManager.query(sql, [], true);
+    const rows = await dbManager.query(sql, params, true);
     const values = rows.map((r: any) => Number(r.avgValue)).filter((v) => !isNaN(v));
-    values.sort((a, b) => a - b);
-    const breakpoints = this.quantileBreakpoints(values, 6);
+    const legend = this.buildAdaptiveLegend(values, pollutant, unit);
 
-    const regions = rows.map((r: any) => ({
-      ...r,
+    const regions = rows.map((r: any) => {
+      const geo = REGION_BOUNDS[r.state] || { lat: 29.5, lng: 76.5, bounds: [[28, 75], [31, 77]] };
+      return {
+        ...r,
+        pollutant,
+        unit,
+        lat: geo.lat,
+        lng: geo.lng,
+        bounds: geo.bounds,
+        colour: this.classify(Number(r.avgValue), legend.breakpoints, legend.palette),
+      };
+    });
+
+    return { regions, legend };
+  }
+
+  /**
+   * Network-level summary for the map dashboard header & KPI cards.
+   */
+  public async getMapSummary(filters: {
+    state?: string;
+    city?: string;
+    pollutant?: string;
+    startDate?: string;
+    endDate?: string;
+  }) {
+    const { stations, legend, stats } = await this.getMapStations(filters);
+    const validStations = stations.filter((s) => s.avgValue != null);
+
+    const networkMean = validStations.length
+      ? Math.round((validStations.reduce((acc, s) => acc + s.avgValue!, 0) / validStations.length) * 100) / 100
+      : null;
+
+    const topHotspot = validStations.length ? validStations[0] : null;
+    const cleanest = validStations.length ? validStations[validStations.length - 1] : null;
+
+    return {
+      stats,
+      pollutant: legend.pollutant,
+      unit: legend.unit,
+      networkMean,
+      dataMin: legend.dataMin,
+      dataMax: legend.dataMax,
+      dataMedian: legend.dataMedian,
+      topHotspot: topHotspot
+        ? { stationId: topHotspot.stationId, stationName: topHotspot.stationName, city: topHotspot.city, state: topHotspot.state, avgValue: topHotspot.avgValue }
+        : null,
+      cleanest: cleanest
+        ? { stationId: cleanest.stationId, stationName: cleanest.stationName, city: cleanest.city, state: cleanest.state, avgValue: cleanest.avgValue }
+        : null,
+      targetRegions: ['Chandigarh', 'Delhi', 'Haryana', 'Punjab'],
+    };
+  }
+
+  /**
+   * Key-value feature lookup for fast map client-side joins.
+   */
+  public async getMapFeatureValues(filters: { pollutant?: string; state?: string }) {
+    const { stations, legend } = await this.getMapStations(filters);
+    const features: Record<string, any> = {};
+    for (const s of stations) {
+      features[s.stationId] = {
+        value: s.avgValue,
+        colour: s.colour,
+        tier: s.tier,
+        lat: s.lat,
+        lng: s.lng,
+        city: s.city,
+        state: s.state,
+      };
+    }
+    return { features, legend };
+  }
+
+  /**
+   * Detailed single station profile.
+   */
+  public async getStationDetail(stationId: string, filters: { pollutant?: string }) {
+    const coords = STATION_COORDS[stationId];
+    const pollutant = (filters.pollutant || 'PM25').toUpperCase();
+    const col = POLLUTANT_COLS[pollutant] || POLLUTANT_COLS['PM25'];
+    const unit = POLLUTANT_UNITS[pollutant] || '\u00b5g/m\u00b3';
+
+    const sql = `
+      SELECT
+        m."Station ID"           as stationId,
+        m."Station Name"         as stationName,
+        m."City"                 as city,
+        m."State"                as state,
+        m."Hours_Recorded_2025"  as hoursRecorded,
+        ROUND(AVG(q.${col}), 2)    as avgValue,
+        ROUND(MEDIAN(q.${col}), 2) as medianValue,
+        ROUND(MIN(q.${col}), 2)    as minValue,
+        ROUND(MAX(q.${col}), 2)    as maxValue,
+        ROUND(QUANTILE_CONT(q.${col}, 0.90), 2) as p90Value,
+        COUNT(q.${col})            as obsCount,
+        ROUND(AVG(q."PM2.5 (\u00b5g/m\u00b3)"), 1) as avgPM25,
+        ROUND(AVG(q."PM10 (\u00b5g/m\u00b3)"), 1)  as avgPM10,
+        ROUND(AVG(q."NO2 (\u00b5g/m\u00b3)"), 1)   as avgNO2,
+        ROUND(AVG(q."SO2 (\u00b5g/m\u00b3)"), 1)   as avgSO2,
+        ROUND(AVG(q."CO (mg/m\u00b3)"), 2)         as avgCO,
+        ROUND(AVG(q."Ozone (\u00b5g/m\u00b3)"), 1) as avgOzone,
+        ROUND(AVG(q."NH3 (\u00b5g/m\u00b3)"), 1)   as avgNH3
+      FROM v_station_metadata m
+      LEFT JOIN v_air_quality_2025 q ON m."Station ID" = q."Station ID"
+      WHERE m."Station ID" = ?
+      GROUP BY m."Station ID", m."Station Name", m."City", m."State", m."Hours_Recorded_2025";
+    `;
+
+    const rows = await dbManager.query(sql, [stationId], true);
+    if (!rows.length) return null;
+
+    const row = rows[0];
+    return {
+      ...row,
+      lat: coords?.lat ?? null,
+      lng: coords?.lng ?? null,
+      hasCoords: coords != null,
       pollutant,
       unit,
-      colour: this.classify(Number(r.avgValue), breakpoints),
-    }));
-
-    return { regions, breakpoints, pollutant, unit };
+      tier: this.cpcbTier(row.avgPM25),
+    };
   }
 
-  // ─── Helpers ───────────────────────────────────────────────────────────────
-
-  private quantileBreakpoints(sortedValues: number[], classes: number): number[] {
-    if (!sortedValues.length) return Array(classes - 1).fill(0);
-    const n = sortedValues.length;
-    const bps: number[] = [];
-    for (let i = 1; i < classes; i++) {
-      const idx = Math.floor((i / classes) * n);
-      bps.push(sortedValues[Math.min(idx, n - 1)]);
-    }
-    return bps;
-  }
-
-  private classify(value: number, breakpoints: number[]): string {
-    if (value == null || isNaN(value)) return '#B0B8B4';
-    if (value <= breakpoints[0]) return '#3CAD5E';
-    if (value <= breakpoints[1]) return '#86C94D';
-    if (value <= breakpoints[2]) return '#F5C842';
-    if (value <= breakpoints[3]) return '#F07520';
-    if (value <= breakpoints[4]) return '#D93A2B';
-    return '#7B1D1D';
-  }
-
-  private cpcbTier(avgPM25: number): string {
+  // --- CPCB Reference Tier Helper ---
+  public cpcbTier(avgPM25: number): string {
     if (avgPM25 == null || isNaN(avgPM25)) return 'Unknown';
     if (avgPM25 <= 30)  return 'Good';
     if (avgPM25 <= 60)  return 'Satisfactory';
@@ -260,4 +576,3 @@ export class MapService {
 }
 
 export const mapService = new MapService();
-

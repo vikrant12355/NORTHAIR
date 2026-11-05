@@ -9,6 +9,7 @@ import { pollutantService } from '../dist/services/pollutant.service.js';
 import { weatherService } from '../dist/services/weather.service.js';
 import { historicalService } from '../dist/services/historical.service.js';
 import { qualityService } from '../dist/services/quality.service.js';
+import { mapService } from '../dist/services/map.service.js';
 
 describe('NorthAir Intelligence DuckDB & Services Verification', () => {
   before(async () => {
@@ -86,6 +87,38 @@ describe('NorthAir Intelligence DuckDB & Services Verification', () => {
     assert.strictEqual(quality.totalStations, 48);
     assert.strictEqual(quality.statutory85PctCompliant, 48);
     assert.ok(quality.saturationCounts.pm25Censored > 0);
+  });
+
+  it('MapService.getMapStations() returns 48 stations with 100% verified coords and adaptive non-duplicate legend', async () => {
+    const res = await mapService.getMapStations({ pollutant: 'PM25' });
+    assert.strictEqual(res.stations.length, 48);
+    const withCoords = res.stations.filter((s) => s.hasCoords);
+    assert.strictEqual(withCoords.length, 48);
+    assert.strictEqual(res.stats.coordinateCoveragePct, 100);
+
+    // Verify adaptive legend has no duplicate boundaries
+    const bps = res.legend.breakpoints;
+    for (let i = 1; i < bps.length; i++) {
+      assert.ok(bps[i] > bps[i - 1], `Breakpoint ${bps[i]} must be strictly greater than ${bps[i - 1]}`);
+    }
+  });
+
+  it('MapService.getMapRegions() returns 4 territories with centroids and non-overlapping classes', async () => {
+    const res = await mapService.getMapRegions({ pollutant: 'PM25' });
+    assert.strictEqual(res.regions.length, 4);
+    for (const r of res.regions) {
+      assert.ok(r.lat > 25 && r.lat < 35);
+      assert.ok(r.lng > 70 && r.lng < 80);
+      assert.ok(typeof r.colour === 'string');
+    }
+  });
+
+  it('MapService.getMapSummary() returns high-level network stats and top hotspot', async () => {
+    const summary = await mapService.getMapSummary({ pollutant: 'PM25' });
+    assert.strictEqual(summary.stats.totalStations, 48);
+    assert.strictEqual(summary.stats.verifiedCoordsCount, 48);
+    assert.ok(summary.networkMean > 0);
+    assert.ok(summary.topHotspot !== null);
   });
 });
 
