@@ -192,3 +192,4 @@ dist/assets/index-BF4LUe_g.js   964.89 kB │ gzip: 263.73 kB
 2. **Cold-Start Resilience**: DuckDB queries execute with lazy view initialization guards (`if (!this.isInitialized) await this.initialize()`) in `database.ts`.
 3. **Data Path Resolution**: `ENV.DATA_DIR` resolves across candidate paths for local development and Vercel Serverless Function execution.
 4. **Bundle Constraints**: High-overhead raw CSVs (>100MB) are excluded in `.gitignore`; production queries execute strictly against columnar Apache Parquet files (`air_quality_2025_ist.parquet`, `station_metadata.parquet`).
+
